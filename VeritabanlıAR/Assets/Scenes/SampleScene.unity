@@ -226,8 +226,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1514843406}
-  - component: {fileID: 1514843407}
   - component: {fileID: 1514843408}
+  - component: {fileID: 1514843409}
   m_Layer: 0
   m_Name: Neo4jManager
   m_TagString: Untagged
@@ -250,7 +250,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1514843407
+--- !u!114 &1514843408
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,10 +259,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1514843405}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a2597ea555e9724cb577436e7c91349, type: 3}
+  m_Script: {fileID: 11500000, guid: a15cab0224d2503419bb3da76ec2b43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1514843408
+--- !u!114 &1514843409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271,9 +271,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1514843405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a15cab0224d2503419bb3da76ec2b43c, type: 3}
+  m_Script: {fileID: 11500000, guid: a013b3b49e88b6746a0ced0b1e11522c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  url: https://localhost:7051/DB/executeOneNode
+  query: Match(n) return n
 --- !u!1 &1626672659
 GameObject:
   m_ObjectHideFlags: 0
