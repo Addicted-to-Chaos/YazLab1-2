@@ -1,29 +1,60 @@
 using UnityEngine;
-using UnityEngine.Networking;
-using System.Collections;
+using System;
+using System.Net;
+using System.IO;
+using System.Text;
 
 public class apiManager : MonoBehaviour
 {
-    string baseUrl = "http://your-neo4j-api-url"; // Neo4j REST API URL'si
-
-    IEnumerator GetNode(string nodeId)
+    public string SendCurlRequest()
     {
-        string getNodeUrl = baseUrl + "/node/" + nodeId;
+        string url = "https://localhost:7051/DB/executeOneNode";
+        string data = "{\"query\": \"Match(n) return n\"}";
+        string result = "";
 
-        UnityWebRequest request = UnityWebRequest.Get(getNodeUrl);
-        yield return request.SendWebRequest();
+        try
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            request.Accept = "text/plain";
 
-        if (request.result == UnityWebRequest.Result.Success)
-        {
-            string response = request.downloadHandler.text;
-            Debug.Log("Node Info: " + response);
-            // Ýstenilen iþlemleri burada yapabilirsiniz.
+            using (var streamWriter = new StreamWriter(request.GetRequestStream()))
+            {
+                streamWriter.Write(data);
+                streamWriter.Flush();
+                streamWriter.Close();
+            }
+
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            using (var streamReader = new StreamReader(response.GetResponseStream()))
+            {
+                result = streamReader.ReadToEnd();
+            }
         }
-        else
+        catch (WebException e)
         {
-            Debug.LogError("Error: " + request.error);
+            // Handle exceptions here
+            if (e.Response != null)
+            {
+                using (var errorResponse = (HttpWebResponse)e.Response)
+                {
+                    using (var reader = new StreamReader(errorResponse.GetResponseStream()))
+                    {
+                        string error = reader.ReadToEnd();
+                        Debug.LogError(error);
+                    }
+                }
+            }
         }
+
+        return result;
     }
 
-    // Diðer HTTP istekleri için gerekli fonksiyonlarý buraya ekleyebilirsiniz.
+    // Örnek kullaným
+    void Start()
+    {
+        string response = SendCurlRequest();
+        Debug.Log("Curl isteði cevabý: " + response);
+    }
 }

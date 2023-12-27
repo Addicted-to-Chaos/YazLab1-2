@@ -6,43 +6,103 @@ using UnityEngine.UI;
 
 public class RestAPI : MonoBehaviour
 {
-
-    private string URL = "https://bb533638.databases.neo4j.io";
-    //public Text LevelText;
-    //public Text ExpText;
-    //public int index;
+    private const string baseUrl = "https://localhost:7051/DB/";
 
 
-
-    void Start()
+    private void Start()
     {
-        StartCoroutine(GetDatas());
+        ExecuteOneNode("Match(n) return n;");
+    }
+    public void ExecuteOneNode(string query)
+    {
+        StartCoroutine(IExecuteOneNode(query));
     }
 
-
-    IEnumerator GetDatas()
+    public IEnumerator IExecuteOneNode(string query)
     {
-        using(UnityWebRequest request = UnityWebRequest.Get(URL))
+        string url = baseUrl + "executeOneNode";
+        string jsonData = JsonUtility.ToJson(new { query });
+
+        UnityWebRequest request = new UnityWebRequest(url, "POST");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        request.SetRequestHeader("accept", "text/plain");
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
         {
-            yield return request.SendWebRequest();
-          
-            if(request.result==UnityWebRequest.Result.ConnectionError)
-            {
-                Debug.LogError(request.error);
-            }
-            else
-            {
-                string json = request.downloadHandler.text;
-               // SimpleJSON.JSONNode stats = SimpleJSON.JSON.Parse(json);
-              //  LevelText.text = "Level:" + stats[index]["level"];
-               // ExpText.text = "Exp:" + stats[index]["exp"];
-                Debug.Log(json);
-            }
+            Debug.Log("Response: " + request.downloadHandler.text);
+            // Baþarýlý istek durumunda cevabý iþleyebilirsiniz.
+        }
+        else
+        {
+            Debug.LogError("Error: " + request.error);
+            // Hata durumunda ne yapýlacaðýný burada iþleyebilirsiniz.
         }
     }
 
+    public void Execute(string query)
+    {
+        StartCoroutine(IExecute(query));
+    }
 
+    public IEnumerator IExecute(string query)
+    {
+        string url = baseUrl + "execute";
+        string jsonData = JsonUtility.ToJson(new { query });
 
+        UnityWebRequest request = new UnityWebRequest(url, "POST");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        request.SetRequestHeader("accept", "text/plain");
 
+        yield return request.SendWebRequest();
 
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Response: " + request.downloadHandler.text);
+            // Baþarýlý istek durumunda cevabý iþleyebilirsiniz.
+        }
+        else
+        {
+            Debug.LogError("Error: " + request.error);
+            // Hata durumunda ne yapýlacaðýný burada iþleyebilirsiniz.
+        }
+    }
+
+    public void ExecuteReturnless(string query)
+    {
+        StartCoroutine(IExecuteReturnless(query));
+    }
+
+    public IEnumerator IExecuteReturnless(string query)
+    {
+        string url = baseUrl + "executeReturnless";
+        string jsonData = JsonUtility.ToJson(new { query });
+
+        UnityWebRequest request = new UnityWebRequest(url, "POST");
+        byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+        request.SetRequestHeader("accept", "text/plain");
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("Response: " + request.downloadHandler.text);
+            // Baþarýlý istek durumunda cevabý iþleyebilirsiniz.
+        }
+        else
+        {
+            Debug.LogError("Error: " + request.error);
+            // Hata durumunda ne yapýlacaðýný burada iþleyebilirsiniz.
+        }
+    }
 }
