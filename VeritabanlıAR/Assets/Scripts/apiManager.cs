@@ -1,60 +1,36 @@
 using UnityEngine;
-using System;
+using System.Collections;
 using System.Net;
 using System.IO;
-using System.Text;
+using System.Threading.Tasks;
+using UnityEngine.Networking;
+using Unity.VisualScripting;
 
 public class apiManager : MonoBehaviour
 {
-    public string SendCurlRequest()
+    private void Start()
     {
-        string url = "https://localhost:7051/DB/executeOneNode";
-        string data = "{\"query\": \"Match(n) return n\"}";
-        string result = "";
-
-        try
-        {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            request.Method = "POST";
-            request.ContentType = "application/json";
-            request.Accept = "text/plain";
-
-            using (var streamWriter = new StreamWriter(request.GetRequestStream()))
-            {
-                streamWriter.Write(data);
-                streamWriter.Flush();
-                streamWriter.Close();
-            }
-
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            using (var streamReader = new StreamReader(response.GetResponseStream()))
-            {
-                result = streamReader.ReadToEnd();
-            }
-        }
-        catch (WebException e)
-        {
-            // Handle exceptions here
-            if (e.Response != null)
-            {
-                using (var errorResponse = (HttpWebResponse)e.Response)
-                {
-                    using (var reader = new StreamReader(errorResponse.GetResponseStream()))
-                    {
-                        string error = reader.ReadToEnd();
-                        Debug.LogError(error);
-                    }
-                }
-            }
-        }
-
-        return result;
+        StartCoroutine(nope());
     }
-
-    // Örnek kullaným
-    void Start()
+    IEnumerator nope()
     {
-        string response = SendCurlRequest();
-        Debug.Log("Curl isteði cevabý: " + response);
+        using (UnityWebRequest www = UnityWebRequest.Post("https://localhost:7051/DB/executeOneNode", "{\"query\":\"Match(n) return n;\"}"))
+        {
+            www.SetRequestHeader("accept", "text/plain");
+            www.SetRequestHeader("Content-Type", "application/json");
+
+            yield return www.SendWebRequest();
+
+            if (www.result != UnityWebRequest.Result.Success)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log(www.downloadHandler.text);
+            }
+        }
     }
 }
+
+

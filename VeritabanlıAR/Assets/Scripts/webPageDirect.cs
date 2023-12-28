@@ -6,7 +6,7 @@ using System.Text;
 using System.Net.Http.Headers;
 using System;
 
-public class webPageDirect : MonoBehaviour
+public class Neo4jRequester : MonoBehaviour
 {
     string url= "file:///C:/Users/kaan4/OneDrive/Belgeler/GitHub/KutuOyunu-Satis-Sitesi/aksesuar.html";
 
