@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using UnityEngine.Networking;
 
@@ -31,9 +32,8 @@ static class MysqlManager
         }
     }
 
-    static async Task<bool> sendGetRequest(string url)
-
     static bool HasErrorMessage(string msg) => int.TryParse(msg, out var res);
+
 }
 public class DatabaseUser
 {
