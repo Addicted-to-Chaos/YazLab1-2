@@ -1224,8 +1224,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 911707793}
-  - component: {fileID: 911707792}
   - component: {fileID: 911707794}
+  - component: {fileID: 911707795}
   m_Layer: 0
   m_Name: manager
   m_TagString: Untagged
@@ -1233,21 +1233,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &911707792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 911707791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 313f6bc7a27acb440a5b12d0f4de8edf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reg_email: {fileID: 665125458}
-  reg_username: {fileID: 1476022843}
-  reg_password: {fileID: 52315588}
 --- !u!4 &911707793
 Transform:
   m_ObjectHideFlags: 0
@@ -1273,6 +1258,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a31ea3662891b124cad6ff4cb8710ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dersProgramlari: []
+  dersler: []
+  dersOgretmen: []
+  ogretmenler: []
+--- !u!114 &911707795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911707791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 313f6bc7a27acb440a5b12d0f4de8edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1129195275
@@ -1652,7 +1653,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 911707792}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: RegisterManager, Assembly-CSharp
         m_MethodName: OnRegisterPressed
         m_Mode: 1
