@@ -1759,7 +1759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Option A
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8954,8 +8954,9 @@ GameObject:
   - component: {fileID: 911707793}
   - component: {fileID: 911707794}
   - component: {fileID: 911707795}
+  - component: {fileID: 911707796}
   m_Layer: 0
-  m_Name: manager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9004,6 +9005,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 313f6bc7a27acb440a5b12d0f4de8edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &911707796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911707791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a215f41bbc962d49ad9cd8352eb5f86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ogretmenlerDropDown: {fileID: 1278779456}
+  seciliOgretmenID: 
+  seciliOgretmenAD: 
+  derslerDropDown: {fileID: 2013824374}
+  seciliDersID: 
+  seciliDersADI: 
+  seciliDersSinifi: 
 --- !u!1 &922055107
 GameObject:
   m_ObjectHideFlags: 0
@@ -9610,7 +9630,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Option A
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9699,7 +9719,7 @@ GameObject:
   - component: {fileID: 1036959794}
   - component: {fileID: 1036959793}
   m_Layer: 5
-  m_Name: Image
+  m_Name: bgImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11703,7 +11723,7 @@ GameObject:
   - component: {fileID: 1278779457}
   - component: {fileID: 1278779456}
   m_Layer: 5
-  m_Name: Dropdown
+  m_Name: OgretmenlerDropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11782,15 +11802,23 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
-      m_Image: {fileID: 0}
-    - m_Text: Option B
-      m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: 
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 911707796}
+        m_TargetAssemblyTypeName: DropdownDatas, Assembly-CSharp
+        m_MethodName: HandleOgretmenlerData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1278779457
 MonoBehaviour:
@@ -15280,7 +15308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1735638070}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: CANVASMainObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17969,7 +17997,7 @@ GameObject:
   - component: {fileID: 2013824375}
   - component: {fileID: 2013824374}
   m_Layer: 5
-  m_Name: Dropdown (1)
+  m_Name: DerslerDropdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18048,11 +18076,7 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
-      m_Image: {fileID: 0}
-    - m_Text: Option B
-      m_Image: {fileID: 0}
-    - m_Text: Option C
+    - m_Text: 
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19117,7 +19141,7 @@ GameObject:
   - component: {fileID: 2126012972}
   - component: {fileID: 2126012971}
   m_Layer: 5
-  m_Name: Image
+  m_Name: dersProgrami
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
