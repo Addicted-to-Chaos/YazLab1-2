@@ -100,7 +100,28 @@ public class DropdownDatas : MonoBehaviour
         LoadOgretmenler();
         LoadDersler();
     }
+
+    
     private void Update()
     {
     }
+
+    public string SeciliOgretmen()
+    {
+        return seciliOgretmenID;
+    }
+    public string SeciliDers()
+    {
+        return seciliDersID;
+    }
+    public string DersAdi()
+    {
+        return seciliDersADI;
+    }
+    public string OgretmenADi()
+    {
+        return seciliOgretmenAD;
+    }
+   
+
 }

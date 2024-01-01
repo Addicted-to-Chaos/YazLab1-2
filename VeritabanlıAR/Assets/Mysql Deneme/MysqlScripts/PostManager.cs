@@ -12,6 +12,7 @@ public class PostManager : MonoBehaviour
     string p_gun_id;
     string p_saat_id;
 
+
     [Header("DersEkle")]
     string ders_ogretmen_id;
     string ders_id;
