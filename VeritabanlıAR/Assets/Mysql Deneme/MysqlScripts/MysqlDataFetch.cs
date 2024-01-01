@@ -22,7 +22,7 @@ public class MysqlDataFetch : MonoBehaviour
 
     public IEnumerator getDersProgrami()
     {
-        UnityWebRequest www = UnityWebRequest.Get(server_url+ "goster/dersprogramý.php");
+        UnityWebRequest www = UnityWebRequest.Get(server_url+ "/dersprogramý.php");
         yield return www.SendWebRequest();
         if (www.isHttpError || www.isNetworkError)
         {
@@ -64,7 +64,7 @@ public class MysqlDataFetch : MonoBehaviour
 
     public IEnumerator getDersler()
     {
-        UnityWebRequest www = UnityWebRequest.Get(server_url + "goster/dersler.php");
+        UnityWebRequest www = UnityWebRequest.Get(server_url + "/dersler.php");
         yield return www.SendWebRequest();
         if (www.isHttpError || www.isNetworkError)
         {
@@ -104,7 +104,7 @@ public class MysqlDataFetch : MonoBehaviour
 
     public IEnumerator getDersOgretmen()
     {
-        UnityWebRequest www = UnityWebRequest.Get(server_url + "goster/dersOgretmen.php");
+        UnityWebRequest www = UnityWebRequest.Get(server_url + "/dersOgretmen.php");
         yield return www.SendWebRequest();
         if (www.isHttpError || www.isNetworkError)
         {
@@ -144,7 +144,7 @@ public class MysqlDataFetch : MonoBehaviour
 
     public IEnumerator getOgretmen()
     {
-        UnityWebRequest www = UnityWebRequest.Get(server_url + "goster/dersOgretmen.php");
+        UnityWebRequest www = UnityWebRequest.Get(server_url + "/dersOgretmen.php");
         yield return www.SendWebRequest();
         if (www.isHttpError || www.isNetworkError)
         {

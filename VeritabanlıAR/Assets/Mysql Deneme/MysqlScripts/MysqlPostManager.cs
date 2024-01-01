@@ -10,7 +10,7 @@ static class MysqlPostManager
     //dersProgramý
     public static async Task<bool> dersprogramiEkle(string p_ders_id, string p_derslik_id, string p_ogretmen_id, string p_gun_id, string p_saat_id)
     {
-        string url = $"{server_url}ekle/dersprograminaEkle.php";
+        string url = $"{server_url}/dersprograminaEkle.php";
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
@@ -24,7 +24,7 @@ static class MysqlPostManager
     //
     public static async Task<bool> dersEkle(string ders_id, string ders_adi, string ders_sinif)
     {
-        string url = $"{server_url}ekle/dersEkle.php";
+        string url = $"{server_url}/dersEkle.php";
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
@@ -36,7 +36,7 @@ static class MysqlPostManager
 
     public static async Task<bool> dersOgretmenEkle(string ders_ogretmen_id, string ders_id, string ogretmen_id)
     {
-        string url = $"{server_url}ekle/dersOgretmenEkle.php";
+        string url = $"{server_url}/dersOgretmenEkle.php";
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
@@ -47,7 +47,7 @@ static class MysqlPostManager
     }
     public static async Task<bool> ogretmenEkle(string ogretmen_id, string ad)
     {
-        string url = $"{server_url}ekle/dersOgretmenEkle.php";
+        string url = $"{server_url}/dersOgretmenEkle.php";
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
