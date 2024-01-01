@@ -28,7 +28,7 @@ public class PostManager : MonoBehaviour
 
     public async void DersProgramiEklendi()
     {
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id, ))
         {
             print("Ders Programý eklendi");
         }
