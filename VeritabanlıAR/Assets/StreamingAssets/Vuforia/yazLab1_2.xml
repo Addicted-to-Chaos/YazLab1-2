@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="dProgram" size="1.000000 1.000000" />
+    <ImageTarget name="1044" size="1.000000 0.562500" />
+    <ImageTarget name="1041" size="1.000000 0.562500" />
+    <ImageTarget name="1040" size="1.000000 0.562500" />
+    <ImageTarget name="1036" size="1.000000 0.562500" />
     <ImageTarget name="itsOk" size="1.000000 1.017663" />
   </Tracking>
 </QCARConfig>

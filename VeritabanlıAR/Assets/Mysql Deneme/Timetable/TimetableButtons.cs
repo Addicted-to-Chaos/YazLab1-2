@@ -13,6 +13,25 @@ public class TimetableButtons : MonoBehaviour
     [SerializeField] GameObject[] thursdayButtons;
     [SerializeField] GameObject[] fridayButtons;
 
+    public Color[] colorList=new Color[]
+        {
+            new Color(1.0f, 0.0f, 0.0f),     // Red
+            new Color(1.0f, 0.5f, 0.0f),   // Orange
+            new Color(1.0f, 1.0f, 0.0f),   // Yellow
+            new Color(0.0f, 1.0f, 0.0f),   // Green
+            new Color(0.0f, 1.0f, 1.0f),   // Cyan
+            new Color(0.0f, 0.0f, 1.0f),   // Blue
+            new Color(1.0f, 0.0f, 1.0f),   // Magenta
+            new Color(0.5f, 0.0f, 0.5f),   // Purple
+            new Color(0.7f, 0.7f, 0.7f),   // Grey
+            new Color(1.0f, 1.0f, 1.0f),   // White
+            new Color(0.0f, 0.0f, 0.0f),   // Black
+            new Color(0.5f, 0.5f, 0.0f),   // Olive
+            new Color(0.5f, 0.0f, 0.5f),   // Maroon
+            new Color(0.0f, 0.5f, 0.5f),   // Teal
+            new Color(0.5f, 0.5f, 1.0f)    // Light Blue
+        };
+
     DropdownDatas dropdownDatas;
 
     public TextMeshProUGUI toastText;
@@ -47,7 +66,7 @@ public class TimetableButtons : MonoBehaviour
         // Süre dolduðunda metni gizle
         toastText.gameObject.SetActive(false);
     }
-
+    #region dersAtama
     public async void Monday1_1Async()
     {
         p_saat_id = "1";
@@ -59,6 +78,16 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             mondayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi+"\n"+ ogretmenAdi;
             mondayButtons[0].GetComponent<Button>().interactable = false;
+
+            for (int i = 0; i < colorList.Length; i++) 
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -80,6 +109,16 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             mondayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             mondayButtons[1].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = mondayButtons[1].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
+
         }
         else
         {
@@ -99,6 +138,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             mondayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             mondayButtons[2].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = mondayButtons[2].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -118,6 +166,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             mondayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             mondayButtons[3].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = mondayButtons[3].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -138,6 +195,15 @@ public class TimetableButtons : MonoBehaviour
 
             mondayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             mondayButtons[4].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = mondayButtons[4].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -157,6 +223,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             mondayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             mondayButtons[5].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = mondayButtons[5].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -176,6 +251,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             mondayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             mondayButtons[6].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = mondayButtons[6].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -195,6 +279,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             mondayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             mondayButtons[7].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = mondayButtons[7].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -214,6 +307,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             mondayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             mondayButtons[8].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = mondayButtons[8].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -234,6 +336,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             tuesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             tuesdayButtons[0].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = tuesdayButtons[0].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -253,6 +364,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             tuesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             tuesdayButtons[1].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = tuesdayButtons[1].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -272,6 +392,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             tuesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             tuesdayButtons[2].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = tuesdayButtons[2].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -291,6 +420,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             tuesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             tuesdayButtons[3].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = tuesdayButtons[3].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -310,6 +448,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             tuesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             tuesdayButtons[4].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = tuesdayButtons[4].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -329,6 +476,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             tuesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             tuesdayButtons[5].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = tuesdayButtons[5].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -348,6 +504,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             tuesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             tuesdayButtons[6].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = tuesdayButtons[6].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -367,6 +532,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             tuesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             tuesdayButtons[7].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = tuesdayButtons[7].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -386,6 +560,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             tuesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             tuesdayButtons[8].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = tuesdayButtons[8].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -405,6 +588,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             wednesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             wednesdayButtons[0].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = wednesdayButtons[0].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -424,6 +616,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             wednesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             wednesdayButtons[1].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = wednesdayButtons[1].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -443,6 +644,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             wednesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             wednesdayButtons[2].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = wednesdayButtons[2].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -462,6 +672,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             wednesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             wednesdayButtons[3].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = wednesdayButtons[3].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -481,6 +700,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             wednesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             wednesdayButtons[4].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = wednesdayButtons[4].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -500,6 +728,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             wednesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             wednesdayButtons[5].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = wednesdayButtons[5].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -519,6 +756,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             wednesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             wednesdayButtons[6].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = wednesdayButtons[6].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -538,6 +784,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             wednesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             wednesdayButtons[7].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = wednesdayButtons[7].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -557,6 +812,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             wednesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             wednesdayButtons[8].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = wednesdayButtons[8].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -578,6 +842,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             thursdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             thursdayButtons[0].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = thursdayButtons[0].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -597,6 +870,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             thursdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             thursdayButtons[1].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = thursdayButtons[1].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -617,6 +899,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             thursdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             thursdayButtons[2].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = thursdayButtons[2].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -637,6 +928,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             thursdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             thursdayButtons[3].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = thursdayButtons[3].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -657,6 +957,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             thursdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             thursdayButtons[4].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = thursdayButtons[4].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -677,6 +986,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             thursdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             thursdayButtons[5].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = thursdayButtons[5].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -697,6 +1015,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             thursdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             thursdayButtons[6].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = thursdayButtons[6].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -717,6 +1044,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             thursdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             thursdayButtons[7].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = thursdayButtons[7].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -737,6 +1073,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             thursdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             thursdayButtons[8].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = thursdayButtons[8].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -757,6 +1102,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             fridayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             fridayButtons[0].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = fridayButtons[0].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -778,6 +1132,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             fridayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             fridayButtons[1].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = fridayButtons[1].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -799,6 +1162,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             fridayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             fridayButtons[2].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = fridayButtons[2].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -820,6 +1192,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             fridayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             fridayButtons[3].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = fridayButtons[3].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -840,6 +1221,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             fridayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             fridayButtons[4].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = fridayButtons[4].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -861,6 +1251,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             fridayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             fridayButtons[5].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = fridayButtons[5].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -882,6 +1281,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             fridayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             fridayButtons[6].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = fridayButtons[6].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -903,6 +1311,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             fridayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             fridayButtons[7].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = fridayButtons[7].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -923,6 +1340,15 @@ public class TimetableButtons : MonoBehaviour
             ShowToast("Eklendi!", 2f);
             fridayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
             fridayButtons[8].GetComponent<Button>().interactable = false;
+            for (int i = 0; i < colorList.Length; i++)
+            {
+                if (p_ders_id.Equals(i.ToString()))
+                {
+                    Debug.Log("hehe");
+                    Image buttonImage = fridayButtons[8].GetComponent<Image>();
+                    buttonImage.color = colorList[i];
+                }
+            }
         }
         else
         {
@@ -932,6 +1358,7 @@ public class TimetableButtons : MonoBehaviour
         }
 
     }
+    #endregion dersAtama
     string dersAdi;
     string ogretmenAdi;
 

@@ -122,6 +122,21 @@ public class DropdownDatas : MonoBehaviour
     {
         return seciliOgretmenAD;
     }
-   
+   public List<string> LDersADI()
+    {
+        return dersADI;
+    }
+    public List<string> LDersID()
+    {
+        return dersID;
+    } 
+    public List<string> LOgretmenADI()
+    {
+        return ogretmenlerAd;
+    }
+    public List<string> LOgretmenID()
+    {
+        return ogretmenlerID;
+    }
 
 }

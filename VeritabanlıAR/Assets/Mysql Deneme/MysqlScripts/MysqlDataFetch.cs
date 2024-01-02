@@ -22,6 +22,8 @@ public class MysqlDataFetch : MonoBehaviour
         StartCoroutine(getDersler());
         StartCoroutine(getDersOgretmen());
         StartCoroutine(getOgretmen());
+        StartCoroutine(getDersProgrami1036());
+
     }
     //private void Update()
     //{
@@ -148,6 +150,7 @@ public class MysqlDataFetch : MonoBehaviour
             string s = www.downloadHandler.text;
             //ilk ders_programi_id
             //ikinci ders_id
+            //asýl ücüncü ogretmen_id
             //ücüncü derslik_id
             //dördüncü gun_id
             //besinci saat_id
@@ -235,7 +238,6 @@ public class MysqlDataFetch : MonoBehaviour
 
     public string[] bin36()
     {
-        StartCoroutine(getDersProgrami1036());
         return dersProgrami1036;
     }
     public string[] bin40()
