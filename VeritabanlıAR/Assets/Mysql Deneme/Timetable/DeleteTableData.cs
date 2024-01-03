@@ -6,7 +6,7 @@ public class DeleteTableData : MonoBehaviour
 {
     public string p_saat_id;
     public string p_gun_id;
-    public string p_derslik_id;
+    public string p_derslik_id; 
 
     TimetableButtons tb;
     private void Awake()

@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Mysql Deneme/Home.unity
+    guid: 1825b88a483a5434e880eda7a65a5ce3
+  - enabled: 1
+    path: Assets/Mysql Deneme/MysqlDeneme.unity
+    guid: 200f8174a7a843d4884d30ed570213ce
+  - enabled: 1
+    path: Assets/Mysql Deneme/1044.unity
+    guid: ec176d15b189c9d4395fb2ee15b5e470
+  - enabled: 1
+    path: Assets/Mysql Deneme/1041.unity
+    guid: 6350e7dcbae67ad4f8df2e2cfc955658
+  - enabled: 1
+    path: Assets/Mysql Deneme/1040.unity
+    guid: fa7fcb2bcc4c35f47af5a88e0813e473
   m_configObjects: {}
