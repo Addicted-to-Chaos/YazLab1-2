@@ -3,7 +3,18 @@ require "conn.php";
 
 
 
-$sql="SELECT ders_programi_id, ders_id, ogretmen_id, derslik_id, gun_id, saat_id, ders_sinif FROM ders_programi WHERE derslik_id = 4;";
+$sql = "SELECT 
+        dp.ders_programi_id,
+        dp.ders_id,
+        dp.ogretmen_id,
+        dp.derslik_id,
+        dp.gun_id,
+        dp.saat_id,
+        d.ders_sinif AS ders_sinif
+        FROM ders_programi dp
+        JOIN ders d ON dp.ders_id = d.ders_id
+        WHERE dp.derslik_id = 4";
+
 $result = $conn->query($sql);
 if($result->num_rows > 0)
 {
