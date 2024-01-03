@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -72,31 +73,71 @@ public class TimetableButtons : MonoBehaviour
     {
         p_saat_id = "1";
         p_gun_id = "1";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.1"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            mondayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi+"\n"+ ogretmenAdi;
-            mondayButtons[0].GetComponent<Button>().interactable = false;
-
-            for (int i = 0; i < colorList.Length; i++) 
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = mondayButtons[0].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if(hangiDonem== PlayerPrefs.GetString("1040-1.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem== PlayerPrefs.GetString("1041-1.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem== PlayerPrefs.GetString("1044-1.1"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-           
-            
+            goto Devam;
         }
-            
+
+    Devam: { 
+        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                mondayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                mondayButtons[0].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+            if (p_derslik_id== "1")
+            {
+                PlayerPrefs.SetString("1036-1.1", dropdownDatas.SeciliDersSINIFI());
+            }
+            else if(p_derslik_id == "2")
+            {
+                PlayerPrefs.SetString("1040-1.1", dropdownDatas.SeciliDersSINIFI());
+            }
+            else if (p_derslik_id == "3")
+            {
+                PlayerPrefs.SetString("1041-1.1", dropdownDatas.SeciliDersSINIFI());
+            }
+            else if (p_derslik_id == "4")
+            {
+                PlayerPrefs.SetString("1044-1.1", dropdownDatas.SeciliDersSINIFI());
+            }
+        }
+        else 
+        {
+            ShowToast("Eklenemedi!", 2f);
+        }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
 
     }
     public async void Monday2_1Async()

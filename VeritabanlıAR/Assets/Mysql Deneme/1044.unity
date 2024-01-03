@@ -10233,9 +10233,54 @@ MonoBehaviour:
   p_saat_id: 
   p_gun_id: 
   p_ders_id: 
-  p_derslik_id: 1
+  p_derslik_id: 4
   p_ogretmen_id: 
-  buttons: []
+  buttons:
+  - {fileID: 1229511562}
+  - {fileID: 2012082074}
+  - {fileID: 630369214}
+  - {fileID: 1009496603}
+  - {fileID: 401154939}
+  - {fileID: 1235479734}
+  - {fileID: 1216690545}
+  - {fileID: 1126007881}
+  - {fileID: 1054548348}
+  - {fileID: 2068312947}
+  - {fileID: 427365490}
+  - {fileID: 174954248}
+  - {fileID: 1451716596}
+  - {fileID: 1752214415}
+  - {fileID: 1105242067}
+  - {fileID: 99164925}
+  - {fileID: 507025362}
+  - {fileID: 998371532}
+  - {fileID: 2121751676}
+  - {fileID: 1716563349}
+  - {fileID: 417685174}
+  - {fileID: 260160870}
+  - {fileID: 244456857}
+  - {fileID: 1729383627}
+  - {fileID: 1667633583}
+  - {fileID: 1911216424}
+  - {fileID: 16745534}
+  - {fileID: 87766422}
+  - {fileID: 690328672}
+  - {fileID: 180069665}
+  - {fileID: 870659989}
+  - {fileID: 1784621949}
+  - {fileID: 216263373}
+  - {fileID: 361222613}
+  - {fileID: 1055782328}
+  - {fileID: 1175361240}
+  - {fileID: 542160476}
+  - {fileID: 1996176534}
+  - {fileID: 51978929}
+  - {fileID: 1745897842}
+  - {fileID: 1935469079}
+  - {fileID: 55247541}
+  - {fileID: 1602308204}
+  - {fileID: 1993269170}
+  - {fileID: 1289287073}
 --- !u!1 &922055107
 GameObject:
   m_ObjectHideFlags: 0

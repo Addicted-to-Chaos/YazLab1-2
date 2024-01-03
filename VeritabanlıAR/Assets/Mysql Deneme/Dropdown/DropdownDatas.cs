@@ -138,5 +138,8 @@ public class DropdownDatas : MonoBehaviour
     {
         return ogretmenlerID;
     }
-
+    public string SeciliDersSINIFI()
+    {
+        return seciliDersSinifi;
+    }
 }
