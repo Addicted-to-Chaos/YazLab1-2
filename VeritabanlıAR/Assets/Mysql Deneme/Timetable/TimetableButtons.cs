@@ -75,20 +75,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "1";
         p_gun_id = "1";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-1.1"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.1")|| hangiDonem == PlayerPrefs.GetString("1036O-1.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-1.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.1") || hangiDonem == PlayerPrefs.GetString("1040O-1.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-1.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.1") || hangiDonem == PlayerPrefs.GetString("1041O-1.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-1.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.1") || hangiDonem == PlayerPrefs.GetString("1044O-1.1"))
         {
             goto Son;
         }
@@ -96,6 +97,7 @@ public class TimetableButtons : MonoBehaviour
         {
             goto Devam;
         }
+        
 
     Devam:
         {
@@ -119,18 +121,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-1.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-1.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-1.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-1.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-1.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-1.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-1.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-1.1", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -151,20 +157,21 @@ public class TimetableButtons : MonoBehaviour
         p_gun_id = "1";
 
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-2.1"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.1")|| hangiHoca == PlayerPrefs.GetString("1036O-2.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-2.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.1") || hangiHoca == PlayerPrefs.GetString("1040O-2.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-2.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.1") || hangiHoca == PlayerPrefs.GetString("1041O-2.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-2.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.1") || hangiHoca == PlayerPrefs.GetString("1044O-2.1"))
         {
             goto Son;
         }
@@ -177,11 +184,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[1].GetComponent<Button>().interactable = false;
@@ -199,18 +202,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-2.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-2.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-2.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-2.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-2.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-2.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-2.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-2.1", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -228,20 +235,22 @@ public class TimetableButtons : MonoBehaviour
         p_gun_id = "1";
 
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-3.1"))
+
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.1")||hangiHoca== PlayerPrefs.GetString("1036O-3.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-3.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.1") || hangiHoca == PlayerPrefs.GetString("1040O-3.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-3.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.1") || hangiHoca == PlayerPrefs.GetString("1041O-3.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-3.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.1") || hangiHoca == PlayerPrefs.GetString("1044O-3.1"))
         {
             goto Son;
         }
@@ -254,11 +263,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[2].GetComponent<Button>().interactable = false;
@@ -276,18 +281,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-3.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-3.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-3.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-3.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-3.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-3.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-3.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-3.1", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -304,20 +313,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "4";
         p_gun_id = "1";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca= dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-4.1"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.1")||hangiHoca==PlayerPrefs.GetString("1036O-4.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-4.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.1") || hangiHoca == PlayerPrefs.GetString("1040O-4.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-4.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.1") || hangiHoca == PlayerPrefs.GetString("1041O-4.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-4.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.1") || hangiHoca == PlayerPrefs.GetString("1044O-4.1"))
         {
             goto Son;
         }
@@ -330,11 +340,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[3].GetComponent<Button>().interactable = false;
@@ -352,18 +358,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-4.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-4.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-4.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-4.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-4.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-4.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-4.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-4.1", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -380,20 +390,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "5";
         p_gun_id = "1";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-5.1"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.1")||hangiHoca==PlayerPrefs.GetString("1036O-5.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-5.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.1") || hangiHoca == PlayerPrefs.GetString("1040O-5.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-5.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.1") || hangiHoca == PlayerPrefs.GetString("1041O-5.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-5.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.1") || hangiHoca == PlayerPrefs.GetString("1044O-5.1"))
         {
             goto Son;
         }
@@ -406,11 +417,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[4].GetComponent<Button>().interactable = false;
@@ -428,18 +435,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-5.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-5.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-5.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-5.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-5.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-5.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-5.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-5.1", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -456,20 +467,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "6";
         p_gun_id = "1";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-6.1"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.1")||hangiHoca==PlayerPrefs.GetString("1036O-6.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-6.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.1") || hangiHoca == PlayerPrefs.GetString("1040O-6.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-6.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.1") || hangiHoca == PlayerPrefs.GetString("1041O-6.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-6.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.1") || hangiHoca == PlayerPrefs.GetString("1044O-6.1"))
         {
             goto Son;
         }
@@ -482,11 +494,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[5].GetComponent<Button>().interactable = false;
@@ -504,18 +512,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-6.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-6.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-6.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-6.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-6.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-6.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-6.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-6.1", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -530,11 +542,7 @@ public class TimetableButtons : MonoBehaviour
     {
         p_saat_id = "7";
         p_gun_id = "1";
-<<<<<<< Updated upstream
-         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
-=======
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
->>>>>>> Stashed changes
 
         if (hangiDonem == PlayerPrefs.GetString("1036-7.1"))
         {
@@ -561,11 +569,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[6].GetComponent<Button>().interactable = false;
@@ -610,20 +614,22 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "8";
         p_gun_id = "1";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-8.1"))
+
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.1")||hangiHoca==PlayerPrefs.GetString("1036O-8.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-8.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.1") || hangiHoca == PlayerPrefs.GetString("1040O-8.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-8.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.1") || hangiHoca == PlayerPrefs.GetString("1041O-8.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-8.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.1") || hangiHoca == PlayerPrefs.GetString("1044O-8.1"))
         {
             goto Son;
         }
@@ -636,11 +642,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[7].GetComponent<Button>().interactable = false;
@@ -658,18 +660,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-8.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-8.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-8.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-8.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-8.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-8.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-8.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-8.1", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -685,20 +691,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "9";
         p_gun_id = "1";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-9.1"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.1")||hangiHoca== PlayerPrefs.GetString("1036O-9.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-9.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.1") || hangiHoca == PlayerPrefs.GetString("1040O-9.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-9.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.1") || hangiHoca == PlayerPrefs.GetString("1041O-9.1"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-9.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.1") || hangiHoca == PlayerPrefs.GetString("1044O-9.1"))
         {
             goto Son;
         }
@@ -711,11 +718,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[8].GetComponent<Button>().interactable = false;
@@ -733,18 +736,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-9.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-9.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-9.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-9.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-9.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-9.1", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-9.1", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-9.1", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -761,20 +768,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "1";
         p_gun_id = "2";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-1.2"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.2")||hangiHoca== PlayerPrefs.GetString("1036O-1.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-1.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.2") || hangiHoca == PlayerPrefs.GetString("1040O-1.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-1.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.2") || hangiHoca == PlayerPrefs.GetString("1041O-1.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-1.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.2") || hangiHoca == PlayerPrefs.GetString("1044O-1.2"))
         {
             goto Son;
         }
@@ -787,11 +795,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[0].GetComponent<Button>().interactable = false;
@@ -809,18 +813,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-1.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-1.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-1.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-1.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-1.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-1.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-1.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-1.2", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -836,20 +844,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "2";
         p_gun_id = "2";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca=dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-2.2"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.2")||hangiHoca==PlayerPrefs.GetString("1036O-2.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-2.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.2") || hangiHoca == PlayerPrefs.GetString("1040O-2.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-2.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.2") || hangiHoca == PlayerPrefs.GetString("1041O-2.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-2.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.2") || hangiHoca == PlayerPrefs.GetString("1044O-2.2"))
         {
             goto Son;
         }
@@ -862,11 +871,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[1].GetComponent<Button>().interactable = false;
@@ -884,18 +889,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-2.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-2.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-2.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-2.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-2.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-2.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-2.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-2.2", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -912,20 +921,21 @@ public class TimetableButtons : MonoBehaviour
         p_gun_id = "2";
 
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-3.2"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.2")||hangiHoca==PlayerPrefs.GetString("1036O-3.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-3.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.2") || hangiHoca == PlayerPrefs.GetString("1040O-3.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-3.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.2") || hangiHoca == PlayerPrefs.GetString("1041O-3.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-3.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.2") || hangiHoca == PlayerPrefs.GetString("1041O-3.2"))
         {
             goto Son;
         }
@@ -938,11 +948,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[2].GetComponent<Button>().interactable = false;
@@ -960,18 +966,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-3.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-3.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-3.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-3.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-3.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-3.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-3.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-3.2", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -987,20 +997,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "4";
         p_gun_id = "2";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-4.2"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.2")||hangiHoca==PlayerPrefs.GetString("1036O-4.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-4.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.2") || hangiHoca == PlayerPrefs.GetString("1040O-4.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-4.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.2") || hangiHoca == PlayerPrefs.GetString("1041O-4.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-4.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.2") || hangiHoca == PlayerPrefs.GetString("1044O-4.2"))
         {
             goto Son;
         }
@@ -1013,11 +1024,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[3].GetComponent<Button>().interactable = false;
@@ -1035,18 +1042,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-4.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-4.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-4.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-4.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-4.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-4.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-4.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-4.2", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1063,20 +1074,21 @@ public class TimetableButtons : MonoBehaviour
         p_gun_id = "2";
 
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-5.2"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.2")||hangiHoca== PlayerPrefs.GetString("1036O-5.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-5.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.2") || hangiHoca == PlayerPrefs.GetString("1040O-5.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-5.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.2") || hangiHoca == PlayerPrefs.GetString("1041O-5.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-5.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.2") || hangiHoca == PlayerPrefs.GetString("1044O-5.2"))
         {
             goto Son;
         }
@@ -1089,11 +1101,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[4].GetComponent<Button>().interactable = false;
@@ -1111,18 +1119,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-5.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-5.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-5.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-5.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-5.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-5.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-5.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-5.2", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1138,20 +1150,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "6";
         p_gun_id = "2";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-6.2"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.2")||hangiHoca==PlayerPrefs.GetString("1036O-6.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-6.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.2") || hangiHoca == PlayerPrefs.GetString("1040O-6.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-6.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.2") || hangiHoca == PlayerPrefs.GetString("1041O-6.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-6.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.2") || hangiHoca == PlayerPrefs.GetString("1044O-6.2"))
         {
             goto Son;
         }
@@ -1164,11 +1177,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[5].GetComponent<Button>().interactable = false;
@@ -1186,18 +1195,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-6.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-6.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-6.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-6.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-6.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-6.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-6.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-6.2", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1213,20 +1226,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "7";
         p_gun_id = "2";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-7.2"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-7.2")||hangiHoca==PlayerPrefs.GetString("1036O-7.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-7.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-7.2")||hangiHoca == PlayerPrefs.GetString("1040O-7.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-7.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-7.2")|| hangiHoca == PlayerPrefs.GetString("1041O-7.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-7.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-7.2")|| hangiHoca == PlayerPrefs.GetString("1044O-7.2"))
         {
             goto Son;
         }
@@ -1239,11 +1253,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[6].GetComponent<Button>().interactable = false;
@@ -1261,18 +1271,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-7.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-7.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-7.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-7.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-7.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-7.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-7.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-7.2", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1288,20 +1302,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "8";
         p_gun_id = "2";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-8.2"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.2")||hangiHoca==PlayerPrefs.GetString("1036O-8.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-8.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.2") || hangiHoca == PlayerPrefs.GetString("1040O-8.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-8.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.2") || hangiHoca == PlayerPrefs.GetString("1041O-8.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-8.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.2") || hangiHoca == PlayerPrefs.GetString("1044O-8.2"))
         {
             goto Son;
         }
@@ -1314,11 +1329,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[7].GetComponent<Button>().interactable = false;
@@ -1336,18 +1347,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-8.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-8.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-8.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-8.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-8.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-8.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-8.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-8.2", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1363,20 +1378,22 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "9";
         p_gun_id = "2";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-9.2"))
+
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.2") || hangiHoca == PlayerPrefs.GetString("1036O-9.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-9.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.2") || hangiHoca == PlayerPrefs.GetString("1040O-9.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-9.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.2") || hangiHoca == PlayerPrefs.GetString("1041O-9.2"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-9.2"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.2") || hangiHoca == PlayerPrefs.GetString("1044O-9.2"))
         {
             goto Son;
         }
@@ -1389,11 +1406,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[8].GetComponent<Button>().interactable = false;
@@ -1411,18 +1424,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-9.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-9.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-9.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-9.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-9.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-9.2", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-9.2", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-9.2", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1438,20 +1455,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "1";
         p_gun_id = "3";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-1.3"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.3") || hangiHoca == PlayerPrefs.GetString("1036O-1.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-1.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.3") || hangiHoca == PlayerPrefs.GetString("1040O-1.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-1.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.3") || hangiHoca == PlayerPrefs.GetString("1041O-1.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-1.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.3") || hangiHoca == PlayerPrefs.GetString("1044O-1.3"))
         {
             goto Son;
         }
@@ -1464,11 +1482,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[0].GetComponent<Button>().interactable = false;
@@ -1486,18 +1500,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-1.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-1.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-1.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-1.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-1.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-1.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-1.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-1.3", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1513,20 +1531,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "2";
         p_gun_id = "3";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-2.3"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.3")||hangiHoca== PlayerPrefs.GetString("1036O-2.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-2.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.3") || hangiHoca == PlayerPrefs.GetString("1040O-2.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-2.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.3") || hangiHoca == PlayerPrefs.GetString("1041O-2.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-2.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.3") || hangiHoca == PlayerPrefs.GetString("1044O-2.3"))
         {
             goto Son;
         }
@@ -1539,11 +1558,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[1].GetComponent<Button>().interactable = false;
@@ -1561,18 +1576,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-2.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-2.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-2.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-2.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-2.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-2.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-2.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-2.3", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1588,20 +1607,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "3";
         p_gun_id = "3";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-3.3"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.3") || hangiHoca == PlayerPrefs.GetString("1036O-3.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-3.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.3") || hangiHoca == PlayerPrefs.GetString("1040O-3.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-3.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.3") || hangiHoca == PlayerPrefs.GetString("1041O-3.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-3.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.3") || hangiHoca == PlayerPrefs.GetString("1044O-3.3"))
         {
             goto Son;
         }
@@ -1614,11 +1634,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[2].GetComponent<Button>().interactable = false;
@@ -1636,18 +1652,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-3.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-3.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-3.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-3.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-3.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-3.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-3.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-3.3", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1663,20 +1683,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "4";
         p_gun_id = "3";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca=dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-4.3"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.3")||hangiHoca==PlayerPrefs.GetString("1036O-4.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-4.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.3") || hangiHoca == PlayerPrefs.GetString("1040O-4.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-4.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.3") || hangiHoca == PlayerPrefs.GetString("1041O-4.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-4.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.3") || hangiHoca == PlayerPrefs.GetString("1044O-4.3"))
         {
             goto Son;
         }
@@ -1689,11 +1710,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[3].GetComponent<Button>().interactable = false;
@@ -1711,18 +1728,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-4.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-4.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-4.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-4.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-4.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-4.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-4.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-4.3", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1738,20 +1759,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "5";
         p_gun_id = "3";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-5.3"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.3")||hangiHoca==PlayerPrefs.GetString("1036O-5,3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-5.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.3") || hangiHoca == PlayerPrefs.GetString("1040O-5,3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-5.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.3") || hangiHoca == PlayerPrefs.GetString("1041O-5,3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-5.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.3") || hangiHoca == PlayerPrefs.GetString("1044O-5,3"))
         {
             goto Son;
         }
@@ -1764,11 +1786,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[4].GetComponent<Button>().interactable = false;
@@ -1786,18 +1804,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-5.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-5.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-5.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-5.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-5.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-5.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-5.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-5.3", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1813,20 +1835,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "6";
         p_gun_id = "3";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-6.3"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.3")||hangiHoca==PlayerPrefs.GetString("1036O-6.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-6.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.3") || hangiHoca == PlayerPrefs.GetString("1040O-6.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-6.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.3") || hangiHoca == PlayerPrefs.GetString("1041O-6.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-6.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.3") || hangiHoca == PlayerPrefs.GetString("1044O-6.3"))
         {
             goto Son;
         }
@@ -1839,11 +1862,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[5].GetComponent<Button>().interactable = false;
@@ -1861,18 +1880,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-6.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-6.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-6.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-6.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-6.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-6.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-6.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-6.3", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1888,20 +1911,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "7";
         p_gun_id = "3";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-7.3"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-7.3")||hangiHoca==PlayerPrefs.GetString("1036O-7.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-7.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-7.3") || hangiHoca == PlayerPrefs.GetString("1040O-7.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-7.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-7.3") || hangiHoca == PlayerPrefs.GetString("1041O-7.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-7.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-7.3") || hangiHoca == PlayerPrefs.GetString("1044O-7.3"))
         {
             goto Son;
         }
@@ -1914,11 +1938,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[6].GetComponent<Button>().interactable = false;
@@ -1936,18 +1956,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-7.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-7.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-7.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-7.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-7.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-7.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-7.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-7.3", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -1963,20 +1987,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "8";
         p_gun_id = "3";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-8.3"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.3")||hangiHoca==PlayerPrefs.GetString("1036O-8.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-8.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.3") || hangiHoca == PlayerPrefs.GetString("1040O-8.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-8.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.3") || hangiHoca == PlayerPrefs.GetString("1041O-8.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-8.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.3") || hangiHoca == PlayerPrefs.GetString("1044O-8.3"))
         {
             goto Son;
         }
@@ -1989,11 +2014,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[7].GetComponent<Button>().interactable = false;
@@ -2011,18 +2032,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-8.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-8.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-8.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-8.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-8.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-8.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-8.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-8.3", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2038,20 +2063,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "9";
         p_gun_id = "3";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-9.3"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.3")||hangiHoca==PlayerPrefs.GetString("1036O-9.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-9.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.3") || hangiHoca == PlayerPrefs.GetString("1040O-9.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-9.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.3") || hangiHoca == PlayerPrefs.GetString("1041O-9.3"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-9.3"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.3") || hangiHoca == PlayerPrefs.GetString("1044O-9.3"))
         {
             goto Son;
         }
@@ -2064,11 +2090,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[8].GetComponent<Button>().interactable = false;
@@ -2086,18 +2108,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-9.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-9.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-9.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-9.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-9.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-9.3", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-9.3", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-9.3", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2140,11 +2166,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[0].GetComponent<Button>().interactable = false;
@@ -2215,11 +2237,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[1].GetComponent<Button>().interactable = false;
@@ -2290,11 +2308,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[2].GetComponent<Button>().interactable = false;
@@ -2365,11 +2379,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[3].GetComponent<Button>().interactable = false;
@@ -2440,11 +2450,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[4].GetComponent<Button>().interactable = false;
@@ -2515,11 +2521,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[5].GetComponent<Button>().interactable = false;
@@ -2590,11 +2592,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[6].GetComponent<Button>().interactable = false;
@@ -2666,11 +2664,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[7].GetComponent<Button>().interactable = false;
@@ -2741,11 +2735,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[8].GetComponent<Button>().interactable = false;
@@ -2816,11 +2806,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[0].GetComponent<Button>().interactable = false;
@@ -2892,11 +2878,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[1].GetComponent<Button>().interactable = false;
@@ -2967,11 +2949,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[2].GetComponent<Button>().interactable = false;
@@ -3043,11 +3021,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[3].GetComponent<Button>().interactable = false;
@@ -3118,11 +3092,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[4].GetComponent<Button>().interactable = false;
@@ -3194,11 +3164,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[5].GetComponent<Button>().interactable = false;
@@ -3270,11 +3236,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[6].GetComponent<Button>().interactable = false;
@@ -3345,11 +3307,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[7].GetComponent<Button>().interactable = false;
@@ -3420,11 +3378,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-<<<<<<< Updated upstream
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
-=======
                 //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
->>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[8].GetComponent<Button>().interactable = false;
