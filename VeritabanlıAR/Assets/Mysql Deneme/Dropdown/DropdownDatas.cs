@@ -142,4 +142,8 @@ public class DropdownDatas : MonoBehaviour
     {
         return seciliDersSinifi;
     }
+    public List<string> LSeciliDersSINIFI()
+    {
+        return dersSinifi;
+    }
 }

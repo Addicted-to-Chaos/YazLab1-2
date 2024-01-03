@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ public class TimetableButtons : MonoBehaviour
     [SerializeField] GameObject[] thursdayButtons;
     [SerializeField] GameObject[] fridayButtons;
 
-    public Color[] colorList=new Color[]
+    public Color[] colorList = new Color[]
         {
             new Color(1.0f, 0.0f, 0.0f),     // Red
             new Color(1.0f, 0.5f, 0.0f),   // Orange
@@ -43,14 +43,14 @@ public class TimetableButtons : MonoBehaviour
     private void Awake()
     {
         dropdownDatas = FindObjectOfType<DropdownDatas>();
-       
+
     }
 
     public string p_saat_id;
     public string p_gun_id;
 
     public string p_ders_id;
-    [SerializeField] string p_derslik_id;
+    [SerializeField] public string p_derslik_id;
     public string p_ogretmen_id;
 
     public void ShowToast(string message, float duration)
@@ -59,14 +59,14 @@ public class TimetableButtons : MonoBehaviour
     }
     private IEnumerator ShowToastCoroutine(string message, float duration)
     {
-        // Metni göster
+        // Metni gï¿½ster
         toastText.text = message;
         toastText.gameObject.SetActive(true);
 
-        // Belirtilen süre kadar bekle
+        // Belirtilen sï¿½re kadar bekle
         yield return new WaitForSeconds(duration);
 
-        // Süre dolduðunda metni gizle
+        // Sï¿½re dolduï¿½unda metni gizle
         toastText.gameObject.SetActive(false);
     }
     #region dersAtama
@@ -101,7 +101,7 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
-                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[0].GetComponent<Button>().interactable = false;
@@ -177,7 +177,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[1].GetComponent<Button>().interactable = false;
@@ -250,7 +254,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[2].GetComponent<Button>().interactable = false;
@@ -322,7 +330,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[3].GetComponent<Button>().interactable = false;
@@ -394,7 +406,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[4].GetComponent<Button>().interactable = false;
@@ -466,7 +482,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[5].GetComponent<Button>().interactable = false;
@@ -510,7 +530,11 @@ public class TimetableButtons : MonoBehaviour
     {
         p_saat_id = "7";
         p_gun_id = "1";
+<<<<<<< Updated upstream
          string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+=======
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+>>>>>>> Stashed changes
 
         if (hangiDonem == PlayerPrefs.GetString("1036-7.1"))
         {
@@ -537,7 +561,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[6].GetComponent<Button>().interactable = false;
@@ -608,7 +636,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[7].GetComponent<Button>().interactable = false;
@@ -679,7 +711,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 mondayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 mondayButtons[8].GetComponent<Button>().interactable = false;
@@ -751,7 +787,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[0].GetComponent<Button>().interactable = false;
@@ -822,7 +862,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[1].GetComponent<Button>().interactable = false;
@@ -894,7 +938,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[2].GetComponent<Button>().interactable = false;
@@ -965,7 +1013,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[3].GetComponent<Button>().interactable = false;
@@ -1037,7 +1089,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[4].GetComponent<Button>().interactable = false;
@@ -1108,7 +1164,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[5].GetComponent<Button>().interactable = false;
@@ -1179,7 +1239,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[6].GetComponent<Button>().interactable = false;
@@ -1250,7 +1314,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[7].GetComponent<Button>().interactable = false;
@@ -1321,7 +1389,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 tuesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 tuesdayButtons[8].GetComponent<Button>().interactable = false;
@@ -1392,7 +1464,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[0].GetComponent<Button>().interactable = false;
@@ -1463,7 +1539,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[1].GetComponent<Button>().interactable = false;
@@ -1534,7 +1614,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[2].GetComponent<Button>().interactable = false;
@@ -1605,7 +1689,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[3].GetComponent<Button>().interactable = false;
@@ -1676,7 +1764,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[4].GetComponent<Button>().interactable = false;
@@ -1747,7 +1839,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[5].GetComponent<Button>().interactable = false;
@@ -1818,7 +1914,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[6].GetComponent<Button>().interactable = false;
@@ -1889,7 +1989,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[7].GetComponent<Button>().interactable = false;
@@ -1960,7 +2064,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 wednesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 wednesdayButtons[8].GetComponent<Button>().interactable = false;
@@ -2032,7 +2140,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[0].GetComponent<Button>().interactable = false;
@@ -2103,7 +2215,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[1].GetComponent<Button>().interactable = false;
@@ -2174,7 +2290,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[2].GetComponent<Button>().interactable = false;
@@ -2245,7 +2365,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[3].GetComponent<Button>().interactable = false;
@@ -2316,7 +2440,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[4].GetComponent<Button>().interactable = false;
@@ -2387,7 +2515,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[5].GetComponent<Button>().interactable = false;
@@ -2458,7 +2590,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[6].GetComponent<Button>().interactable = false;
@@ -2530,7 +2666,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[7].GetComponent<Button>().interactable = false;
@@ -2601,7 +2741,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 thursdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 thursdayButtons[8].GetComponent<Button>().interactable = false;
@@ -2672,7 +2816,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[0].GetComponent<Button>().interactable = false;
@@ -2744,7 +2892,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[1].GetComponent<Button>().interactable = false;
@@ -2815,7 +2967,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[2].GetComponent<Button>().interactable = false;
@@ -2887,7 +3043,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[3].GetComponent<Button>().interactable = false;
@@ -2958,7 +3118,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[4].GetComponent<Button>().interactable = false;
@@ -3030,7 +3194,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[5].GetComponent<Button>().interactable = false;
@@ -3102,7 +3270,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[6].GetComponent<Button>().interactable = false;
@@ -3173,7 +3345,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[7].GetComponent<Button>().interactable = false;
@@ -3244,7 +3420,11 @@ public class TimetableButtons : MonoBehaviour
         {
             if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
+<<<<<<< Updated upstream
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
+=======
+                //buton deaktif olup text yazï¿½cak dersadï¿½ ve sï¿½nï¿½fï¿½
+>>>>>>> Stashed changes
                 ShowToast("Eklendi!", 2f);
                 fridayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
                 fridayButtons[8].GetComponent<Button>().interactable = false;
@@ -3296,21 +3476,21 @@ public class TimetableButtons : MonoBehaviour
     {
         p_ders_id = dropdownDatas.SeciliDers();
         p_ogretmen_id = dropdownDatas.SeciliOgretmen();
-        dersAdi= dropdownDatas.DersAdi();
-        ogretmenAdi=dropdownDatas.OgretmenADi();
+        dersAdi = dropdownDatas.DersAdi();
+        ogretmenAdi = dropdownDatas.OgretmenADi();
 
         if (String.IsNullOrWhiteSpace(p_ogretmen_id) || String.IsNullOrWhiteSpace(p_ders_id))
         {
 
             foreach (Button button in buttons)
             {
-                
+
                 button.GetComponent<Button>().interactable = false;
             }
         }
         else
         {
-          
+
             foreach (Button button in buttons)
             {
                 if (String.IsNullOrWhiteSpace(button.GetComponentInChildren<TextMeshProUGUI>().text))

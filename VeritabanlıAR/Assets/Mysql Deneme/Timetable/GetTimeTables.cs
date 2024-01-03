@@ -47,6 +47,7 @@ public class GetTimeTables : MonoBehaviour
 
     DropdownDatas dropdownDatas;
     List<string> dropDownDersID;
+    List<string> dropDownDersSinifi;
     List<string> dropDownDersADI;
     List<string> dropDownOgretmenlerID;
     List<string> dropDownOgretmenlerADI;
@@ -71,6 +72,7 @@ public class GetTimeTables : MonoBehaviour
         dropDownDersID = dropdownDatas.LDersID();
         dropDownOgretmenlerADI = dropdownDatas.LOgretmenADI();
         dropDownOgretmenlerID = dropdownDatas.LOgretmenID();
+        dropDownDersSinifi = dropdownDatas.LSeciliDersSINIFI();
         dersProgrami1036 = dataFetch.bin36();
         dersProgrami1040 = dataFetch.bin40();
         dersProgrami1041 = dataFetch.bin41();
@@ -96,7 +98,6 @@ public class GetTimeTables : MonoBehaviour
     private void Update()
     {
         //dersProgrami1036 = dataFetch.bin36();
-       Debug.Log(dropDownDersID.Count);
         //b1036();
         
     }
@@ -161,6 +162,8 @@ public class GetTimeTables : MonoBehaviour
                         pazartesi[index1-1].GetComponent<Button>().interactable = false;
                         Image buttonImage = pazartesi[index1 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1036-" + parcalar[5] + ".1";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "2":
@@ -171,6 +174,8 @@ public class GetTimeTables : MonoBehaviour
                         sali[index2 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = sali[index2 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1036-" + parcalar[5] + ".2";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "3":
@@ -181,6 +186,8 @@ public class GetTimeTables : MonoBehaviour
                         carsamba[index3-1].GetComponent<Button>().interactable = false;
                         Image buttonImage = carsamba[index3 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1036-" + parcalar[5] + ".3";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "4":
@@ -191,6 +198,8 @@ public class GetTimeTables : MonoBehaviour
                         persembe[index4 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = persembe[index4 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1036-" + parcalar[5] + ".4";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "5":
@@ -201,6 +210,8 @@ public class GetTimeTables : MonoBehaviour
                         cuma[index5 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = cuma[index5 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1036-" + parcalar[5] + ".5";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 default:
@@ -271,6 +282,8 @@ public class GetTimeTables : MonoBehaviour
                         pazartesi[index1 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = pazartesi[index1 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1040-" + parcalar[5] + ".1";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "2":
@@ -281,6 +294,8 @@ public class GetTimeTables : MonoBehaviour
                         sali[index2 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = sali[index2 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1040-" + parcalar[5] + ".2";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "3":
@@ -291,6 +306,8 @@ public class GetTimeTables : MonoBehaviour
                         carsamba[index3 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = carsamba[index3 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1040-" + parcalar[5] + ".3";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "4":
@@ -301,6 +318,8 @@ public class GetTimeTables : MonoBehaviour
                         persembe[index4 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = persembe[index4 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1040-" + parcalar[5] + ".4";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "5":
@@ -311,6 +330,8 @@ public class GetTimeTables : MonoBehaviour
                         cuma[index5 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = cuma[index5 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1040-" + parcalar[5] + ".5";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 default:
@@ -379,6 +400,8 @@ public class GetTimeTables : MonoBehaviour
                         pazartesi[index1 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = pazartesi[index1 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1041-" + parcalar[5] + ".1";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "2":
@@ -389,6 +412,8 @@ public class GetTimeTables : MonoBehaviour
                         sali[index2 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = sali[index2 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1041-" + parcalar[5] + ".2";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "3":
@@ -399,6 +424,8 @@ public class GetTimeTables : MonoBehaviour
                         carsamba[index3 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = carsamba[index3 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1041-" + parcalar[5] + ".3";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "4":
@@ -409,6 +436,8 @@ public class GetTimeTables : MonoBehaviour
                         persembe[index4 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = persembe[index4 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1041-" + parcalar[5] + ".4";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "5":
@@ -419,6 +448,8 @@ public class GetTimeTables : MonoBehaviour
                         cuma[index5 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = cuma[index5 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1041-" + parcalar[5] + ".5";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 default:
@@ -474,8 +505,12 @@ public class GetTimeTables : MonoBehaviour
                     break;
                 }
             }
+            for(int j=0; j < timeTable.colorList.Length; j++)
+            {
 
+            }
 
+            //parcalar[6] deðiþince kullan
             switch (parcalar[4])
             {
                 case "1":
@@ -486,6 +521,8 @@ public class GetTimeTables : MonoBehaviour
                         pazartesi[index1 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = pazartesi[index1 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1044-" + parcalar[5] + ".1";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "2":
@@ -496,6 +533,8 @@ public class GetTimeTables : MonoBehaviour
                         sali[index2 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = sali[index2 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1044-" + parcalar[5] + ".2";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "3":
@@ -506,6 +545,8 @@ public class GetTimeTables : MonoBehaviour
                         carsamba[index3 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = carsamba[index3 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1044-" + parcalar[5] + ".3";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "4":
@@ -516,6 +557,8 @@ public class GetTimeTables : MonoBehaviour
                         persembe[index4 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = persembe[index4 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1044-" + parcalar[5] + ".4";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 case "5":
@@ -526,6 +569,8 @@ public class GetTimeTables : MonoBehaviour
                         cuma[index5 - 1].GetComponent<Button>().interactable = false;
                         Image buttonImage = cuma[index5 - 1].GetComponent<Image>();
                         buttonImage.color = color;
+                        string prefsTag = "1044-" + parcalar[5] + ".5";
+                        PlayerPrefs.SetString(prefsTag, parcalar[6]);
                     }
                     break;
                 default:
