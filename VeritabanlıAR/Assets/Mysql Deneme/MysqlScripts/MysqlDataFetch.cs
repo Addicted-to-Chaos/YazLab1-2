@@ -23,6 +23,9 @@ public class MysqlDataFetch : MonoBehaviour
         StartCoroutine(getDersOgretmen());
         StartCoroutine(getOgretmen());
         StartCoroutine(getDersProgrami1036());
+        StartCoroutine(getDersProgrami1040());
+        StartCoroutine(getDersProgrami1041());
+        StartCoroutine(getDersProgrami1044());
 
     }
     //private void Update()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -1362,6 +1363,7 @@ public class TimetableButtons : MonoBehaviour
     string dersAdi;
     string ogretmenAdi;
 
+    public Button[] buttons;
 
 
     // Update is called once per frame
@@ -1371,7 +1373,31 @@ public class TimetableButtons : MonoBehaviour
         p_ogretmen_id = dropdownDatas.SeciliOgretmen();
         dersAdi= dropdownDatas.DersAdi();
         ogretmenAdi=dropdownDatas.OgretmenADi();
-      
+
+        if (String.IsNullOrWhiteSpace(p_ogretmen_id) || String.IsNullOrWhiteSpace(p_ders_id))
+        {
+
+            foreach (Button button in buttons)
+            {
+                
+                button.GetComponent<Button>().interactable = false;
+            }
+        }
+        else
+        {
+          
+            foreach (Button button in buttons)
+            {
+                if (String.IsNullOrWhiteSpace(button.GetComponentInChildren<TextMeshProUGUI>().text))
+                {
+
+
+                    button.GetComponent<Button>().interactable = true;
+                }
+
+            }
+        }
+
 
     }
 }

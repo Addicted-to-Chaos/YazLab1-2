@@ -53,6 +53,9 @@ public class GetTimeTables : MonoBehaviour
 
     string ders;
     string ogretmen;
+    Color color;
+
+    TimetableButtons timeTable;
 
     private void Awake()
     {
@@ -61,6 +64,7 @@ public class GetTimeTables : MonoBehaviour
 
     private void Start()
     {
+        timeTable = FindObjectOfType<TimetableButtons>();
         dataFetch = FindObjectOfType<MysqlDataFetch>();
         dropdownDatas = FindObjectOfType<DropdownDatas>();
         dropDownDersADI = dropdownDatas.LDersADI();
@@ -75,8 +79,8 @@ public class GetTimeTables : MonoBehaviour
         if (bin36)
         {
             b1036();
-        }
-        if (bin40)
+        }                  
+        else if (bin40)
         {
             b1040();
         }
@@ -120,14 +124,31 @@ public class GetTimeTables : MonoBehaviour
                     ders = dropDownDersADI[j];
 
                     Debug.Log(ders);
+                    break;
                 }
+               
+
+            }   for (int j = 0; j < dropDownDersID.Count; j++)
+            {
                 if (parcalar[2].Equals(dropDownOgretmenlerID[j]))
                 {
                     ogretmen = dropDownOgretmenlerADI[j];
                     Debug.Log(ogretmen);
+                    break;
                 }
 
             }
+            for (int j = 0; j <timeTable.colorList.Length; j++)
+            {
+                if (parcalar[1].Equals(j.ToString()))
+                {
+                    Debug.Log("hehe");
+                    
+                   color =timeTable.colorList[j];
+                    break;
+                }
+            }
+
 
 
             switch (parcalar[4])
@@ -138,6 +159,8 @@ public class GetTimeTables : MonoBehaviour
                     {
                         pazartesi[index1-1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
                         pazartesi[index1-1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = pazartesi[index1 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
                     }
                     break;
                 case "2":
@@ -146,6 +169,8 @@ public class GetTimeTables : MonoBehaviour
                     {
                         sali[index2-1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
                         sali[index2 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = sali[index2 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
                     }
                     break;
                 case "3":
@@ -154,6 +179,8 @@ public class GetTimeTables : MonoBehaviour
                     {
                         carsamba[index3-1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
                         carsamba[index3-1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = carsamba[index3 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
                     }
                     break;
                 case "4":
@@ -162,6 +189,8 @@ public class GetTimeTables : MonoBehaviour
                     {
                         persembe[index4-1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
                         persembe[index4 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = persembe[index4 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
                     }
                     break;
                 case "5":
@@ -170,6 +199,8 @@ public class GetTimeTables : MonoBehaviour
                     {
                         cuma[index5-1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
                         cuma[index5 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = cuma[index5 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
                     }
                     break;
                 default:
@@ -183,58 +214,322 @@ public class GetTimeTables : MonoBehaviour
     
     void b1040()
     {
-        if (dersProgrami1036[0].Trim() != "0 result")
+        for (int i = 0; i < dataFetch.dersProgrami1040.Length - 1; i++)
         {
-            for (int i = 0; i < dersProgrami1040.Length - 1; i++)
+            string[] parcalar = dataFetch.dersProgrami1040[i].Trim().Split(",");
+            ders_programi_id.Add(parcalar[0]);
+            ders_id.Add(parcalar[1]);
+            ogretmen_id.Add(parcalar[2]);
+            derslik_id.Add(parcalar[3]);
+            gun_id.Add(parcalar[4]);
+            saat_id.Add(parcalar[5]);
+            ders_sinif.Add(parcalar[6]);
+
+            ////////
+            for (int j = 0; j < dropDownDersID.Count; j++)
             {
-                string[] parcalar = dersProgrami1040[i].Trim().Split(",");
-                ders_programi_id.Add(parcalar[0]);
-                ders_id.Add(parcalar[1]);
-                ogretmen_id.Add(parcalar[2]);
-                derslik_id.Add(parcalar[3]);
-                gun_id.Add(parcalar[4]);
-                saat_id.Add(parcalar[5]);
-                ders_sinif.Add(parcalar[6]);
+                if (parcalar[1].Equals(dropDownDersID[j]))
+                {
+                    ders = dropDownDersADI[j];
+
+                    Debug.Log(ders);
+                    break;
+                }
+
+
+            }
+            for (int j = 0; j < dropDownDersID.Count; j++)
+            {
+                if (parcalar[2].Equals(dropDownOgretmenlerID[j]))
+                {
+                    ogretmen = dropDownOgretmenlerADI[j];
+                    Debug.Log(ogretmen);
+                    break;
+                }
 
             }
 
-            
+            for (int j = 0; j < timeTable.colorList.Length; j++)
+            {
+                if (parcalar[1].Equals(j.ToString()))
+                {
+                    Debug.Log("hehe");
+
+                    color = timeTable.colorList[j];
+                    break;
+                }
+            }
+
+
+            switch (parcalar[4])
+            {
+                case "1":
+                    int index1;
+                    if (int.TryParse(parcalar[5], out index1))
+                    {
+                        pazartesi[index1 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        pazartesi[index1 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = pazartesi[index1 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "2":
+                    int index2;
+                    if (int.TryParse(parcalar[5], out index2))
+                    {
+                        sali[index2 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        sali[index2 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = sali[index2 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "3":
+                    int index3;
+                    if (int.TryParse(parcalar[5], out index3))
+                    {
+                        carsamba[index3 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        carsamba[index3 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = carsamba[index3 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "4":
+                    int index4;
+                    if (int.TryParse(parcalar[5], out index4))
+                    {
+                        persembe[index4 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        persembe[index4 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = persembe[index4 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "5":
+                    int index5;
+                    if (int.TryParse(parcalar[5], out index5))
+                    {
+                        cuma[index5 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        cuma[index5 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = cuma[index5 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
     void b1041()
     {
-        if (dersProgrami1036[0].Trim() != "0 result")
+        for (int i = 0; i < dataFetch.dersProgrami1041.Length - 1; i++)
         {
-            for (int i = 0; i < dersProgrami1041.Length - 1; i++)
-            {
-                string[] parcalar = dersProgrami1041[i].Trim().Split(",");
-                ders_programi_id.Add(parcalar[0]);
-                ders_id.Add(parcalar[1]);
-                ogretmen_id.Add(parcalar[2]);
-                derslik_id.Add(parcalar[3]);
-                gun_id.Add(parcalar[4]);
-                saat_id.Add(parcalar[5]);
-                ders_sinif.Add(parcalar[6]);
+            string[] parcalar = dataFetch.dersProgrami1041[i].Trim().Split(",");
+            ders_programi_id.Add(parcalar[0]);
+            ders_id.Add(parcalar[1]);
+            ogretmen_id.Add(parcalar[2]);
+            derslik_id.Add(parcalar[3]);
+            gun_id.Add(parcalar[4]);
+            saat_id.Add(parcalar[5]);
+            ders_sinif.Add(parcalar[6]);
 
+            ////////
+            for (int j = 0; j < dropDownDersID.Count; j++)
+            {
+                if (parcalar[1].Equals(dropDownDersID[j]))
+                {
+                    ders = dropDownDersADI[j];
+
+                    Debug.Log(ders);
+                    break;
+                }
+
+
+            }
+            for (int j = 0; j < dropDownDersID.Count; j++)
+            {
+                if (parcalar[2].Equals(dropDownOgretmenlerID[j]))
+                {
+                    ogretmen = dropDownOgretmenlerADI[j];
+                    Debug.Log(ogretmen);
+                    break;
+                }
+
+            }
+
+
+            for (int j = 0; j < timeTable.colorList.Length; j++)
+            {
+                if (parcalar[1].Equals(j.ToString()))
+                {
+                    Debug.Log("hehe");
+
+                    color = timeTable.colorList[j];
+                    break;
+                }
+            }
+
+
+
+            switch (parcalar[4])
+            {
+                case "1":
+                    int index1;
+                    if (int.TryParse(parcalar[5], out index1))
+                    {
+                        pazartesi[index1 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        pazartesi[index1 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = pazartesi[index1 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "2":
+                    int index2;
+                    if (int.TryParse(parcalar[5], out index2))
+                    {
+                        sali[index2 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        sali[index2 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = sali[index2 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "3":
+                    int index3;
+                    if (int.TryParse(parcalar[5], out index3))
+                    {
+                        carsamba[index3 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        carsamba[index3 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = carsamba[index3 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "4":
+                    int index4;
+                    if (int.TryParse(parcalar[5], out index4))
+                    {
+                        persembe[index4 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        persembe[index4 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = persembe[index4 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "5":
+                    int index5;
+                    if (int.TryParse(parcalar[5], out index5))
+                    {
+                        cuma[index5 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        cuma[index5 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = cuma[index5 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                default:
+                    break;
             }
         }
 
     }
     void b1044()
     {
-        if (dersProgrami1036[0].Trim() != "0 result")
+        for (int i = 0; i < dataFetch.dersProgrami1044.Length - 1; i++)
         {
-            for (int i = 0; i < dersProgrami1044.Length - 1; i++)
-            {
-                string[] parcalar = dersProgrami1044[i].Trim().Split(",");
-                ders_programi_id.Add(parcalar[0]);
-                ders_id.Add(parcalar[1]);
-                ogretmen_id.Add(parcalar[2]);
-                derslik_id.Add(parcalar[3]);
-                gun_id.Add(parcalar[4]);
-                saat_id.Add(parcalar[5]);
-                ders_sinif.Add(parcalar[6]);
+            string[] parcalar = dataFetch.dersProgrami1044[i].Trim().Split(",");
+            ders_programi_id.Add(parcalar[0]);
+            ders_id.Add(parcalar[1]);
+            ogretmen_id.Add(parcalar[2]);
+            derslik_id.Add(parcalar[3]);
+            gun_id.Add(parcalar[4]);
+            saat_id.Add(parcalar[5]);
+            ders_sinif.Add(parcalar[6]);
 
+            ////////
+
+            for (int j = 0; j < dropDownDersID.Count ; j++)
+            {
+                if (parcalar[1].Equals(dropDownDersID[j]))
+                {
+                    ders = dropDownDersADI[j];
+
+                    Debug.Log(ders);
+                    break;
+                }
+
+
+            }
+            for (int j = 0; j < dropDownDersID.Count ; j++)
+            {
+                if (parcalar[2].Equals(dropDownOgretmenlerID[j]))
+                {
+                    ogretmen = dropDownOgretmenlerADI[j];
+                    Debug.Log(ogretmen);
+                    break;
+                }
+
+            }
+            for (int j = 0; j < timeTable.colorList.Length; j++)
+            {
+                if (parcalar[1].Equals(j.ToString()))
+                {
+                    Debug.Log("hehe");
+
+                    color = timeTable.colorList[j];
+                    break;
+                }
+            }
+
+
+            switch (parcalar[4])
+            {
+                case "1":
+                    int index1;
+                    if (int.TryParse(parcalar[5], out index1))
+                    {
+                        pazartesi[index1 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        pazartesi[index1 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = pazartesi[index1 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "2":
+                    int index2;
+                    if (int.TryParse(parcalar[5], out index2))
+                    {
+                        sali[index2 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        sali[index2 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = sali[index2 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "3":
+                    int index3;
+                    if (int.TryParse(parcalar[5], out index3))
+                    {
+                        carsamba[index3 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        carsamba[index3 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = carsamba[index3 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "4":
+                    int index4;
+                    if (int.TryParse(parcalar[5], out index4))
+                    {
+                        persembe[index4 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        persembe[index4 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = persembe[index4 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                case "5":
+                    int index5;
+                    if (int.TryParse(parcalar[5], out index5))
+                    {
+                        cuma[index5 - 1].GetComponentInChildren<TextMeshProUGUI>().text = ders + "\n" + ogretmen;
+                        cuma[index5 - 1].GetComponent<Button>().interactable = false;
+                        Image buttonImage = cuma[index5 - 1].GetComponent<Image>();
+                        buttonImage.color = color;
+                    }
+                    break;
+                default:
+                    break;
             }
         }
     }
