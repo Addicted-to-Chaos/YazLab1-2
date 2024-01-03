@@ -8,7 +8,7 @@ $ogretmenId=$_POST["p_ogretmen_id"];
 $gunId=$_POST["p_gun_id"];
 $saatId=$_POST["p_saat_id"];
 
-$sql="CALL EkleDersProgrami('.$dersID.','.$derslikId.','.$ogretmenId.','.$gunId.','.$saatId.')";
+$sql="CALL EkleDersProgrami('.$dersId.','.$derslikId.','.$ogretmenId.','.$gunId.','.$saatId.')";
 
 
 try
