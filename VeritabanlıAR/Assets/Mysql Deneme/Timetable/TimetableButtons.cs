@@ -1,7 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-
+using System.Linq;
+using System.Threading.Tasks;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -79,15 +80,15 @@ public class TimetableButtons : MonoBehaviour
         {
             goto Son;
         }
-        else if(hangiDonem== PlayerPrefs.GetString("1040-1.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.1"))
         {
             goto Son;
         }
-        else if (hangiDonem== PlayerPrefs.GetString("1041-1.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.1"))
         {
             goto Son;
         }
-        else if (hangiDonem== PlayerPrefs.GetString("1044-1.1"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.1"))
         {
             goto Son;
         }
@@ -96,8 +97,9 @@ public class TimetableButtons : MonoBehaviour
             goto Devam;
         }
 
-    Devam: { 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
             {
                 //buton deaktif olup text yazýcak dersadý ve sýnýfý
                 ShowToast("Eklendi!", 2f);
@@ -114,1291 +116,3173 @@ public class TimetableButtons : MonoBehaviour
                     }
                 }
 
-            if (p_derslik_id== "1")
-            {
-                PlayerPrefs.SetString("1036-1.1", dropdownDatas.SeciliDersSINIFI());
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-1.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-1.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-1.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-1.1", dropdownDatas.SeciliDersSINIFI());
+                }
             }
-            else if(p_derslik_id == "2")
+            else
             {
-                PlayerPrefs.SetString("1040-1.1", dropdownDatas.SeciliDersSINIFI());
+                ShowToast("Eklenemedi!", 2f);
             }
-            else if (p_derslik_id == "3")
-            {
-                PlayerPrefs.SetString("1041-1.1", dropdownDatas.SeciliDersSINIFI());
-            }
-            else if (p_derslik_id == "4")
-            {
-                PlayerPrefs.SetString("1044-1.1", dropdownDatas.SeciliDersSINIFI());
-            }
-        }
-        else 
-        {
-            ShowToast("Eklenemedi!", 2f);
-        }
         }
     Son:
         ShowToast("Baska bir ders ile cakismaktadir!", 2f);
 
     }
+
+
+
     public async void Monday2_1Async()
     {
         p_saat_id = "2";
         p_gun_id = "1";
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
-        {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            mondayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            mondayButtons[1].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = mondayButtons[1].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.1"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                mondayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                mondayButtons[1].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-2.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-2.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-2.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-2.1", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
+
     }
     public async void Monday3_1Async()
     {
         p_saat_id = "3";
         p_gun_id = "1";
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.1"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            mondayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            mondayButtons[2].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = mondayButtons[2].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.1"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                mondayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                mondayButtons[2].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-3.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-3.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-3.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-3.1", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
+
     }
     public async void Monday4_1Async()
     {
         p_saat_id = "4";
         p_gun_id = "1";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.1"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            mondayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            mondayButtons[3].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = mondayButtons[3].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.1"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                mondayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                mondayButtons[3].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-4.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-4.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-4.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-4.1", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
+
     }
     public async void Monday5_1Async()
     {
         p_saat_id = "5";
         p_gun_id = "1";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.1"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-
-            mondayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            mondayButtons[4].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = mondayButtons[4].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.1"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                mondayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                mondayButtons[4].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-5.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-5.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-5.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-5.1", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
+
     }
     public async void Monday6_1Async()
     {
         p_saat_id = "6";
         p_gun_id = "1";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.1"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            mondayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            mondayButtons[5].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = mondayButtons[5].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.1"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                mondayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                mondayButtons[5].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-6.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-6.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-6.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-6.1", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Monday7_1Async()
     {
         p_saat_id = "7";
         p_gun_id = "1";
+         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-7.1"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            mondayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            mondayButtons[6].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = mondayButtons[6].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-7.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-7.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-7.1"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                mondayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                mondayButtons[6].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-7.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-7.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-7.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-7.1", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Monday8_1Async()
     {
         p_saat_id = "8";
         p_gun_id = "1";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.1"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            mondayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            mondayButtons[7].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = mondayButtons[7].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.1"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                mondayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                mondayButtons[7].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-8.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-8.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-8.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-8.1", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Monday9_1Async()
     {
         p_saat_id = "9";
         p_gun_id = "1";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.1"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            mondayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            mondayButtons[8].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = mondayButtons[8].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.1"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.1"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                mondayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                mondayButtons[8].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-9.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-9.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-9.1", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-9.1", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
 
     public async void Tuesday1_2Async()
     {
         p_saat_id = "1";
         p_gun_id = "2";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.2"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            tuesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            tuesdayButtons[0].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = tuesdayButtons[0].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.2"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                tuesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                tuesdayButtons[0].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-1.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-1.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-1.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-1.2", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Tuesday2_2Async()
     {
         p_saat_id = "2";
         p_gun_id = "2";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.2"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            tuesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            tuesdayButtons[1].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = tuesdayButtons[1].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.2"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                tuesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                tuesdayButtons[1].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-2.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-2.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-2.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-2.2", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Tuesday3_2Async()
     {
         p_saat_id = "3";
         p_gun_id = "2";
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.2"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            tuesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            tuesdayButtons[2].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = tuesdayButtons[2].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.2"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                tuesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                tuesdayButtons[2].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-3.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-3.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-3.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-3.2", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Tuesday4_2Async()
     {
         p_saat_id = "4";
         p_gun_id = "2";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.2"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            tuesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            tuesdayButtons[3].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = tuesdayButtons[3].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.2"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                tuesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                tuesdayButtons[3].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-4.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-4.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-4.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-4.2", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Tuesday5_2Async()
     {
         p_saat_id = "5";
         p_gun_id = "2";
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.2"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            tuesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            tuesdayButtons[4].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = tuesdayButtons[4].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.2"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                tuesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                tuesdayButtons[4].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-5.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-5.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-5.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-5.2", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Tuesday6_2Async()
     {
         p_saat_id = "6";
         p_gun_id = "2";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.2"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            tuesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            tuesdayButtons[5].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = tuesdayButtons[5].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.2"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                tuesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                tuesdayButtons[5].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-6.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-6.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-6.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-6.2", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Tuesday7_2Async()
     {
         p_saat_id = "7";
         p_gun_id = "2";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-7.2"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            tuesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            tuesdayButtons[6].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = tuesdayButtons[6].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-7.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-7.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-7.2"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                tuesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                tuesdayButtons[6].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-7.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-7.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-7.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-7.2", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Tuesday8_2Async()
     {
         p_saat_id = "8";
         p_gun_id = "2";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.2"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            tuesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            tuesdayButtons[7].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = tuesdayButtons[7].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.2"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                tuesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                tuesdayButtons[7].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-8.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-8.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-8.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-8.2", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Tuesday9_2Async()
     {
         p_saat_id = "9";
         p_gun_id = "2";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.2"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            tuesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            tuesdayButtons[8].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = tuesdayButtons[8].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.2"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.2"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                tuesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                tuesdayButtons[8].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-9.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-9.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-9.2", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-9.2", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Wednesday1_3Async()
     {
         p_saat_id = "1";
         p_gun_id = "3";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.3"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            wednesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            wednesdayButtons[0].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = wednesdayButtons[0].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.3"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                wednesdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                wednesdayButtons[0].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-1.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-1.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-1.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-1.3", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Wednesday2_3Async()
     {
         p_saat_id = "2";
         p_gun_id = "3";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.3"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            wednesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            wednesdayButtons[1].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = wednesdayButtons[1].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.3"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                wednesdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                wednesdayButtons[1].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-2.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-2.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-2.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-2.3", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Wednesday3_3Async()
     {
         p_saat_id = "3";
         p_gun_id = "3";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.3"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            wednesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            wednesdayButtons[2].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = wednesdayButtons[2].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.3"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                wednesdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                wednesdayButtons[2].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-3.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-3.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-3.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-3.3", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Wednesday4_3Async()
     {
         p_saat_id = "4";
         p_gun_id = "3";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.3"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            wednesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            wednesdayButtons[3].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = wednesdayButtons[3].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.3"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                wednesdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                wednesdayButtons[3].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-4.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-4.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-4.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-4.3", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Wednesday5_3Async()
     {
         p_saat_id = "5";
         p_gun_id = "3";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.3"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            wednesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            wednesdayButtons[4].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = wednesdayButtons[4].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.3"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                wednesdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                wednesdayButtons[4].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-5.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-5.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-5.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-5.3", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Wednesday6_3Async()
     {
         p_saat_id = "6";
         p_gun_id = "3";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.3"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            wednesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            wednesdayButtons[5].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = wednesdayButtons[5].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.3"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                wednesdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                wednesdayButtons[5].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-6.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-6.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-6.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-6.3", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Wednesday7_3Async()
     {
         p_saat_id = "7";
         p_gun_id = "3";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-7.3"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            wednesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            wednesdayButtons[6].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = wednesdayButtons[6].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-7.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-7.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-7.3"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                wednesdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                wednesdayButtons[6].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-7.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-7.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-7.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-7.3", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Wednesday8_3Async()
     {
         p_saat_id = "8";
         p_gun_id = "3";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.3"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            wednesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            wednesdayButtons[7].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = wednesdayButtons[7].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.3"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
+
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                wednesdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                wednesdayButtons[7].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-8.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-8.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-8.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-8.3", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Wednesday9_3Async()
     {
         p_saat_id = "9";
         p_gun_id = "3";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.3"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            wednesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            wednesdayButtons[8].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = wednesdayButtons[8].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.3"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.3"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                wednesdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                wednesdayButtons[8].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-9.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-9.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-9.3", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-9.3", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
 
     public async void Thursday1_4Async()
     {
         p_saat_id = "1";
         p_gun_id = "4";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.4"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            thursdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            thursdayButtons[0].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = thursdayButtons[0].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.4"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                thursdayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                thursdayButtons[0].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-1.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-1.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-1.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-1.4", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Thursday2_4Async()
     {
         p_saat_id = "2";
         p_gun_id = "4";
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.4"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            thursdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            thursdayButtons[1].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = thursdayButtons[1].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.4"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                thursdayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                thursdayButtons[1].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-2.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-2.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-2.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-2.4", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Thursday3_4Async()
     {
         p_saat_id = "3";
         p_gun_id = "4";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.4"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            thursdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            thursdayButtons[2].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = thursdayButtons[2].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.4"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                thursdayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                thursdayButtons[2].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-3.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-3.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-3.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-3.4", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Thursday4_4Async()
     {
         p_saat_id = "4";
         p_gun_id = "4";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.4"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            thursdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            thursdayButtons[3].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = thursdayButtons[3].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.4"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                thursdayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                thursdayButtons[3].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-4.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-4.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-4.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-4.4", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Thursday5_4Async()
     {
         p_saat_id = "5";
         p_gun_id = "4";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.4"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            thursdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            thursdayButtons[4].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = thursdayButtons[4].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.4"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                thursdayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                thursdayButtons[4].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-5.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-5.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-5.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-5.4", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Thursday6_4Async()
     {
         p_saat_id = "6";
         p_gun_id = "4";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.4"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            thursdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            thursdayButtons[5].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = thursdayButtons[5].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.4"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                thursdayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                thursdayButtons[5].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-6.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-6.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-6.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-6.4", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Thursday7_4Async()
     {
         p_saat_id = "7";
         p_gun_id = "4";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-7.4"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            thursdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            thursdayButtons[6].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = thursdayButtons[6].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-7.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-7.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-7.4"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                thursdayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                thursdayButtons[6].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-7.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-7.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-7.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-7.4", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Thursday8_4Async()
     {
         p_saat_id = "8";
         p_gun_id = "4";
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.4"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            thursdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            thursdayButtons[7].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = thursdayButtons[7].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.4"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                thursdayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                thursdayButtons[7].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-8.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-8.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-8.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-8.4", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Thursday9_4Async()
     {
         p_saat_id = "9";
         p_gun_id = "4";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.4"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            thursdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            thursdayButtons[8].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = thursdayButtons[8].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.4"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.4"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                thursdayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                thursdayButtons[8].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-9.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-9.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-9.4", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-9.4", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Friday1_5Async()
     {
         p_saat_id = "1";
         p_gun_id = "5";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.5"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            fridayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            fridayButtons[0].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = fridayButtons[0].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.5"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                fridayButtons[0].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                fridayButtons[0].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-1.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-1.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-1.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-1.5", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
 
     public async void Friday2_5Async()
     {
         p_saat_id = "2";
         p_gun_id = "5";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.5"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            fridayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            fridayButtons[1].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = fridayButtons[1].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.5"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
-    }
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                fridayButtons[1].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                fridayButtons[1].GetComponent<Button>().interactable = false;
 
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-2.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-2.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-2.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-2.5", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
+    }
     public async void Friday3_5Async()
     {
         p_saat_id = "3";
         p_gun_id = "5";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.5"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            fridayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            fridayButtons[2].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = fridayButtons[2].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.5"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                fridayButtons[2].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                fridayButtons[2].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-3.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-3.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-3.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-3.5", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
 
     public async void Friday4_5Async()
     {
         p_saat_id = "4";
         p_gun_id = "5";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.5"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            fridayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            fridayButtons[3].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = fridayButtons[3].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.5"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                fridayButtons[3].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                fridayButtons[3].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-4.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-4.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-4.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-4.5", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Friday5_5Async()
     {
         p_saat_id = "5";
         p_gun_id = "5";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.5"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            fridayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            fridayButtons[4].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = fridayButtons[4].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.5"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                fridayButtons[4].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                fridayButtons[4].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-5.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-5.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-5.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-5.5", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
 
     public async void Friday6_5Async()
     {
         p_saat_id = "6";
         p_gun_id = "5";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.5"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            fridayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            fridayButtons[5].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = fridayButtons[5].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.5"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                fridayButtons[5].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                fridayButtons[5].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-6.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-6.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-6.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-6.5", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
 
     public async void Friday7_5Async()
     {
         p_saat_id = "7";
         p_gun_id = "5";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-7.5"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            fridayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            fridayButtons[6].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = fridayButtons[6].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-7.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-7.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-7.5"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
-    }
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                fridayButtons[6].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                fridayButtons[6].GetComponent<Button>().interactable = false;
 
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-7.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-7.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-7.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-7.5", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
+    }
     public async void Friday8_5Async()
     {
         p_saat_id = "8";
         p_gun_id = "5";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.5"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            fridayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            fridayButtons[7].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = fridayButtons[7].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.5"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                fridayButtons[7].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                fridayButtons[7].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-8.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-8.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-8.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-8.5", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     public async void Friday9_5Async()
     {
         p_saat_id = "9";
         p_gun_id = "5";
+        string hangiDonem = dropdownDatas.SeciliDersSINIFI();
 
-        if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.5"))
         {
-            //buton deaktif olup text yazýcak dersadý ve sýnýfý
-            ShowToast("Eklendi!", 2f);
-            fridayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
-            fridayButtons[8].GetComponent<Button>().interactable = false;
-            for (int i = 0; i < colorList.Length; i++)
-            {
-                if (p_ders_id.Equals(i.ToString()))
-                {
-                    Debug.Log("hehe");
-                    Image buttonImage = fridayButtons[8].GetComponent<Image>();
-                    buttonImage.color = colorList[i];
-                }
-            }
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.5"))
+        {
+            goto Son;
+        }
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.5"))
+        {
+            goto Son;
         }
         else
         {
-            ShowToast("Eklenemedi!", 2f);
-
-
+            goto Devam;
         }
 
+    Devam:
+        {
+            if (await MysqlPostManager.dersprogramiEkle(p_ders_id, p_derslik_id, p_ogretmen_id, p_gun_id, p_saat_id))
+            {
+                //buton deaktif olup text yazýcak dersadý ve sýnýfý
+                ShowToast("Eklendi!", 2f);
+                fridayButtons[8].GetComponentInChildren<TextMeshProUGUI>().text = dersAdi + "\n" + ogretmenAdi;
+                fridayButtons[8].GetComponent<Button>().interactable = false;
+
+                for (int i = 0; i < colorList.Length; i++)
+                {
+                    if (p_ders_id.Equals(i.ToString()))
+                    {
+                        Debug.Log("hehe");
+                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        buttonImage.color = colorList[i];
+                    }
+                }
+
+                if (p_derslik_id == "1")
+                {
+                    PlayerPrefs.SetString("1036-9.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "2")
+                {
+                    PlayerPrefs.SetString("1040-9.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "3")
+                {
+                    PlayerPrefs.SetString("1041-9.5", dropdownDatas.SeciliDersSINIFI());
+                }
+                else if (p_derslik_id == "4")
+                {
+                    PlayerPrefs.SetString("1044-9.5", dropdownDatas.SeciliDersSINIFI());
+                }
+            }
+            else
+            {
+                ShowToast("Eklenemedi!", 2f);
+            }
+        }
+    Son:
+        ShowToast("Baska bir ders ile cakismaktadir!", 2f);
     }
     #endregion dersAtama
     string dersAdi;
