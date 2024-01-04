@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10402,7 +10402,7 @@ MonoBehaviour:
   p_saat_id: 
   p_gun_id: 
   p_ders_id: 
-  p_derslik_id: 1
+  p_derslik_id: 3
   p_ogretmen_id: 
   buttons:
   - {fileID: 1229511562}
@@ -22058,9 +22058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 490f9443b48873a4f846e3eb9919fd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bin36: 1
+  bin36: 0
   bin40: 0
-  bin41: 0
+  bin41: 1
   bin44: 0
   pazartesi:
   - {fileID: 1229511560}

@@ -194,7 +194,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = mondayButtons[1].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -273,7 +273,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = mondayButtons[2].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -350,7 +350,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = mondayButtons[3].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -427,7 +427,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = mondayButtons[4].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -504,7 +504,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = mondayButtons[5].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -579,7 +579,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = mondayButtons[6].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -652,7 +652,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = mondayButtons[7].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -728,7 +728,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = mondayButtons[8].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -805,7 +805,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = tuesdayButtons[0].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -881,7 +881,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = tuesdayButtons[1].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -958,7 +958,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = tuesdayButtons[2].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1034,7 +1034,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = tuesdayButtons[3].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1111,7 +1111,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = tuesdayButtons[4].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1187,7 +1187,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = tuesdayButtons[5].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1263,7 +1263,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = tuesdayButtons[6].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1339,7 +1339,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = tuesdayButtons[7].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1416,7 +1416,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = tuesdayButtons[8].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1492,7 +1492,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = wednesdayButtons[0].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1568,7 +1568,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = wednesdayButtons[1].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1644,7 +1644,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = wednesdayButtons[2].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1720,7 +1720,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = wednesdayButtons[3].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1796,7 +1796,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = wednesdayButtons[4].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1872,7 +1872,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = wednesdayButtons[5].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -1948,7 +1948,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = wednesdayButtons[6].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2024,7 +2024,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = wednesdayButtons[7].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2100,7 +2100,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = wednesdayButtons[8].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2177,7 +2177,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = thursdayButtons[0].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2253,7 +2253,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = thursdayButtons[1].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2329,7 +2329,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = thursdayButtons[2].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2405,7 +2405,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = thursdayButtons[3].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2481,7 +2481,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = thursdayButtons[4].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2557,7 +2557,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = thursdayButtons[5].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2633,7 +2633,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = thursdayButtons[6].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2710,7 +2710,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = thursdayButtons[7].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2786,7 +2786,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = thursdayButtons[8].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2862,7 +2862,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = fridayButtons[0].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -2939,7 +2939,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = fridayButtons[1].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -3015,7 +3015,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = fridayButtons[2].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -3092,7 +3092,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = fridayButtons[3].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -3168,7 +3168,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = fridayButtons[4].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -3245,7 +3245,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = fridayButtons[5].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -3322,7 +3322,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = fridayButtons[6].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -3398,7 +3398,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = fridayButtons[7].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }
@@ -3474,7 +3474,7 @@ public class TimetableButtons : MonoBehaviour
                     if (p_ders_id.Equals(i.ToString()))
                     {
                         Debug.Log("hehe");
-                        Image buttonImage = mondayButtons[0].GetComponent<Image>();
+                        Image buttonImage = fridayButtons[8].GetComponent<Image>();
                         buttonImage.color = colorList[i];
                     }
                 }

@@ -11218,7 +11218,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
-        m_MethodName: Thursday9_4Async
+        m_MethodName: Thursday8_4Async
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
