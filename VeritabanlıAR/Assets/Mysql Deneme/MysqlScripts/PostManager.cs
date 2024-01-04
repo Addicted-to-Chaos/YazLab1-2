@@ -38,7 +38,7 @@ public class PostManager : MonoBehaviour
     }
     public async void DersEkle()
     {
-        if (await MysqlPostManager.dersEkle(ders_ogretmen_id, ders_id, ogretmen_id))
+        if (await MysqlPostManager.dersEkle(ders_id, ogretmen_id))
         {
             print("Ders Programý eklendi");
         }
@@ -56,7 +56,7 @@ public class PostManager : MonoBehaviour
     }
     public async void OgretmenEkle()
     {
-        if (await MysqlPostManager.ogretmenEkle(Oogretmen_id, ad))
+        if (await MysqlPostManager.ogretmenEkle(ad))
         {
             print("Ders Programý eklendi");
         }

@@ -22,13 +22,12 @@ static class MysqlPostManager
         });
     }
     //
-    public static async Task<bool> dersEkle(string ders_id, string ders_adi, string ders_sinif)
+    public static async Task<bool> dersEkle(string ders_adi, string ders_sinif)
     {
         string url = $"{server_url}/dersEkle.php";
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
-            {"ders_id",ders_id},
             {"ders_adi",ders_adi}, //Post ile belirtilen php dosyasýna gönderilen deðerler
             {"ders_sinif",ders_sinif},
         });
@@ -45,13 +44,12 @@ static class MysqlPostManager
             {"ogretmen_id",ogretmen_id},
         });
     }
-    public static async Task<bool> ogretmenEkle(string ogretmen_id, string ad)
+    public static async Task<bool> ogretmenEkle( string ad)
     {
         string url = $"{server_url}/dersOgretmenEkle.php";
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
-            {"ogretmen_id",ogretmen_id},
             {"ad",ad}, //Post ile belirtilen php dosyasýna gönderilen deðerler
         });
     }
@@ -89,6 +87,16 @@ static class MysqlPostManager
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
             {"p_derslik_id",p_ders_id} //Post ile belirtilen php dosyasýna gönderilen deðerler
+            
+        });
+    }
+    public static async Task<bool> ogretmenSil(string ad)
+    {
+        string url = $"{server_url}/ogretmenSil.php";
+
+        return await sendPostRequest(url, new Dictionary<string, string>()
+        {
+            {"ad",ad} //Post ile belirtilen php dosyasýna gönderilen deðerler
             
         });
     }
