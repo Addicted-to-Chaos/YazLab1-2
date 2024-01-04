@@ -1568,7 +1568,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1356381431}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EkleCikarManager, Assembly-CSharp
         m_MethodName: DersCikar
         m_Mode: 1
@@ -6009,7 +6009,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1356381432}
-  - component: {fileID: 1356381431}
+  - component: {fileID: 1356381433}
   m_Layer: 0
   m_Name: EkleCikarManager
   m_TagString: Untagged
@@ -6017,6 +6017,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
 --- !u!114 &1356381431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6035,6 +6036,8 @@ MonoBehaviour:
   ders_adi: {fileID: 1922727331}
   ogretmen_adi: {fileID: 8130616}
   aa: {fileID: 1206034984}
+=======
+>>>>>>> Stashed changes
 --- !u!4 &1356381432
 Transform:
   m_ObjectHideFlags: 0
@@ -6050,6 +6053,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356381433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356381430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a764d4599b1ea4f88e2f4d81f96c09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p_ders_id: 
+  dersSinifSelected: 
+  ders_adi: {fileID: 1922727331}
+  ogretmen_adi: {fileID: 1922727331}
+  aa: {fileID: 1206034984}
 --- !u!1 &1374830163
 GameObject:
   m_ObjectHideFlags: 0
@@ -7304,6 +7324,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+<<<<<<< Updated upstream
       - m_Target: {fileID: 1356381431}
         m_TargetAssemblyTypeName: EkleCikarManager, Assembly-CSharp
         m_MethodName: OgretmenSil
@@ -7311,6 +7332,15 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+=======
+      - m_Target: {fileID: 1356381430}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+>>>>>>> Stashed changes
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

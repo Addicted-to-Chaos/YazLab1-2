@@ -27,6 +27,9 @@ public class HomeControl : MonoBehaviour
     public void sceneEkleCikar()
     {
         SceneManager.LoadScene("EkleCikar");
+    }public void sceneAR()
+    {
+        SceneManager.LoadScene("SampleScene");
     }
     public void MenuBack()
     {

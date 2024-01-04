@@ -8,8 +8,13 @@ using UnityEngine.UI;
 public class EkleCikarManager : MonoBehaviour
 {
     DropdownDatas dd;
+<<<<<<< Updated upstream
     [SerializeField] string p_ders_id;
     [SerializeField] string p_ogretmen_id;
+=======
+    [SerializeField]string p_ders_id;
+    [SerializeField]string p_ogretmen_id;
+>>>>>>> Stashed changes
     public string dersSinifSelected;
 
     public TMP_InputField ders_adi;
@@ -18,11 +23,18 @@ public class EkleCikarManager : MonoBehaviour
 
     private void Update()
     {
+<<<<<<< Updated upstream
         dd = FindObjectOfType<DropdownDatas>();
         p_ders_id = dd.seciliDersID;
         p_ogretmen_id = dd.SeciliOgretmen();
         dersSinifSelected = aa.value.ToString(); 
 
+=======
+        dd= FindObjectOfType<DropdownDatas>();
+        p_ders_id = dd.seciliDersID;
+        p_ogretmen_id = dd.SeciliOgretmen();
+        dersSinifSelected = aa.value.ToString();
+>>>>>>> Stashed changes
     }
 
 
