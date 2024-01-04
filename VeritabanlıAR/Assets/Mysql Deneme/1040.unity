@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Wednesday5_3Async
         m_Mode: 1
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Friday1_5Async
         m_Mode: 1
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Friday9_5Async
         m_Mode: 1
@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Thursday7_4Async
         m_Mode: 1
@@ -1526,7 +1526,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Wednesday4_3Async
         m_Mode: 1
@@ -1835,7 +1835,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Tuesday3_2Async
         m_Mode: 1
@@ -2224,7 +2224,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Monday8_1Async
         m_Mode: 1
@@ -2840,7 +2840,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Thursday5_4Async
         m_Mode: 1
@@ -3014,7 +3014,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Tuesday2_2Async
         m_Mode: 1
@@ -3414,7 +3414,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Tuesday9_2Async
         m_Mode: 1
@@ -3993,7 +3993,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Thursday2_4Async
         m_Mode: 1
@@ -4378,7 +4378,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Friday3_5Async
         m_Mode: 1
@@ -4552,7 +4552,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Wednesday1_3Async
         m_Mode: 1
@@ -4950,7 +4950,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Wednesday9_3Async
         m_Mode: 1
@@ -5162,7 +5162,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Tuesday7_2Async
         m_Mode: 1
@@ -6719,7 +6719,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Monday1_1Async
         m_Mode: 1
@@ -7065,7 +7065,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Tuesday1_2Async
         m_Mode: 1
@@ -9141,7 +9141,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Monday2_1Async
         m_Mode: 1
@@ -9744,55 +9744,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mondayButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 556285270}
+  - {fileID: 836005886}
+  - {fileID: 1817959009}
+  - {fileID: 1135529793}
+  - {fileID: 1757682955}
+  - {fileID: 1623049141}
+  - {fileID: 1605369777}
+  - {fileID: 129285453}
+  - {fileID: 1334652199}
   tuesdayButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 572630115}
+  - {fileID: 179298394}
+  - {fileID: 101813333}
+  - {fileID: 970919096}
+  - {fileID: 1778853595}
+  - {fileID: 1013878749}
+  - {fileID: 404140782}
+  - {fileID: 1952251089}
+  - {fileID: 259266965}
   wednesdayButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 329007530}
+  - {fileID: 1366157291}
+  - {fileID: 1724943408}
+  - {fileID: 74172129}
+  - {fileID: 25219102}
+  - {fileID: 1151204151}
+  - {fileID: 1590770934}
+  - {fileID: 1171399245}
+  - {fileID: 364611542}
   thursdayButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1258082377}
+  - {fileID: 294386339}
+  - {fileID: 2085692449}
+  - {fileID: 1100583260}
+  - {fileID: 176152694}
+  - {fileID: 1969917744}
+  - {fileID: 61898756}
+  - {fileID: 1388978401}
+  - {fileID: 1024189043}
   fridayButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 25261391}
+  - {fileID: 1855801613}
+  - {fileID: 312355567}
+  - {fileID: 2137334372}
+  - {fileID: 1505457028}
+  - {fileID: 979227943}
+  - {fileID: 1943504172}
+  - {fileID: 2117797620}
+  - {fileID: 26573896}
   colorList:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 1, g: 0.5, b: 0, a: 1}
@@ -9816,51 +9816,51 @@ MonoBehaviour:
   p_derslik_id: 2
   p_ogretmen_id: 
   buttons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 556285274}
+  - {fileID: 572630119}
+  - {fileID: 329007534}
+  - {fileID: 1258082381}
+  - {fileID: 25261395}
+  - {fileID: 179298398}
+  - {fileID: 1366157295}
+  - {fileID: 294386343}
+  - {fileID: 1855801617}
+  - {fileID: 836005890}
+  - {fileID: 101813337}
+  - {fileID: 1724943412}
+  - {fileID: 2085692453}
+  - {fileID: 312355571}
+  - {fileID: 1817959013}
+  - {fileID: 970919100}
+  - {fileID: 74172133}
+  - {fileID: 1100583264}
+  - {fileID: 2137334376}
+  - {fileID: 1135529797}
+  - {fileID: 1778853599}
+  - {fileID: 25219106}
+  - {fileID: 176152698}
+  - {fileID: 1505457032}
+  - {fileID: 1757682959}
+  - {fileID: 1013878753}
+  - {fileID: 1151204155}
+  - {fileID: 1969917748}
+  - {fileID: 979227947}
+  - {fileID: 1623049145}
+  - {fileID: 1605369781}
+  - {fileID: 404140786}
+  - {fileID: 1590770938}
+  - {fileID: 61898760}
+  - {fileID: 1943504176}
+  - {fileID: 129285457}
+  - {fileID: 1952251093}
+  - {fileID: 1171399249}
+  - {fileID: 1388978405}
+  - {fileID: 2117797624}
+  - {fileID: 1334652203}
+  - {fileID: 259266969}
+  - {fileID: 364611546}
+  - {fileID: 1024189047}
+  - {fileID: 26573900}
 --- !u!1 &912084613
 GameObject:
   m_ObjectHideFlags: 0
@@ -10196,7 +10196,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Tuesday4_2Async
         m_Mode: 1
@@ -10507,7 +10507,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Friday6_5Async
         m_Mode: 1
@@ -10907,7 +10907,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Tuesday6_2Async
         m_Mode: 1
@@ -11216,7 +11216,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Thursday9_4Async
         m_Mode: 1
@@ -11877,7 +11877,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Thursday4_4Async
         m_Mode: 1
@@ -12374,7 +12374,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Monday4_1Async
         m_Mode: 1
@@ -12683,7 +12683,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Wednesday6_3Async
         m_Mode: 1
@@ -13068,7 +13068,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Wednesday8_3Async
         m_Mode: 1
@@ -13668,7 +13668,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Thursday1_4Async
         m_Mode: 1
@@ -14694,7 +14694,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Monday9_1Async
         m_Mode: 1
@@ -15003,7 +15003,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Wednesday2_3Async
         m_Mode: 1
@@ -15484,7 +15484,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Thursday8_4Async
         m_Mode: 1
@@ -16643,7 +16643,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Friday5_5Async
         m_Mode: 1
@@ -16973,7 +16973,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Wednesday7_3Async
         m_Mode: 1
@@ -17147,7 +17147,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Monday7_1Async
         m_Mode: 1
@@ -17456,7 +17456,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Monday6_1Async
         m_Mode: 1
@@ -18375,7 +18375,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Wednesday3_3Async
         m_Mode: 1
@@ -18716,7 +18716,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Monday5_1Async
         m_Mode: 1
@@ -18927,7 +18927,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Tuesday5_2Async
         m_Mode: 1
@@ -19101,7 +19101,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Monday3_1Async
         m_Mode: 1
@@ -19621,7 +19621,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Friday2_5Async
         m_Mode: 1
@@ -20006,7 +20006,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Friday7_5Async
         m_Mode: 1
@@ -20315,7 +20315,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Tuesday8_2Async
         m_Mode: 1
@@ -20624,7 +20624,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Thursday6_4Async
         m_Mode: 1
@@ -21578,7 +21578,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Thursday3_4Async
         m_Mode: 1
@@ -21662,55 +21662,55 @@ MonoBehaviour:
   bin41: 0
   bin44: 0
   pazartesi:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 556285270}
+  - {fileID: 836005886}
+  - {fileID: 1817959009}
+  - {fileID: 1135529793}
+  - {fileID: 1757682955}
+  - {fileID: 1623049141}
+  - {fileID: 1605369777}
+  - {fileID: 129285453}
+  - {fileID: 1334652199}
   sali:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 572630115}
+  - {fileID: 179298394}
+  - {fileID: 101813333}
+  - {fileID: 970919096}
+  - {fileID: 1778853595}
+  - {fileID: 1013878749}
+  - {fileID: 404140782}
+  - {fileID: 1952251089}
+  - {fileID: 259266965}
   carsamba:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 329007530}
+  - {fileID: 1366157291}
+  - {fileID: 1724943408}
+  - {fileID: 74172129}
+  - {fileID: 25219102}
+  - {fileID: 1151204151}
+  - {fileID: 1590770934}
+  - {fileID: 1171399245}
+  - {fileID: 364611542}
   persembe:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1258082377}
+  - {fileID: 294386339}
+  - {fileID: 2085692449}
+  - {fileID: 1100583260}
+  - {fileID: 176152694}
+  - {fileID: 1969917744}
+  - {fileID: 61898756}
+  - {fileID: 1388978401}
+  - {fileID: 1024189043}
   cuma:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 25261391}
+  - {fileID: 1855801613}
+  - {fileID: 312355567}
+  - {fileID: 2137334372}
+  - {fileID: 1505457028}
+  - {fileID: 979227943}
+  - {fileID: 1943504172}
+  - {fileID: 2117797620}
+  - {fileID: 26573896}
 --- !u!4 &2117068546
 Transform:
   m_ObjectHideFlags: 0
@@ -21850,7 +21850,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Friday8_5Async
         m_Mode: 1
@@ -22024,7 +22024,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 911707797}
         m_TargetAssemblyTypeName: TimetableButtons, Assembly-CSharp
         m_MethodName: Friday4_5Async
         m_Mode: 1

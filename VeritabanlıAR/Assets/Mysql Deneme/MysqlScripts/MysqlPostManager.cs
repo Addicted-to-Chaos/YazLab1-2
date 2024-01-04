@@ -82,6 +82,16 @@ static class MysqlPostManager
             {"p_saat_id",p_saat_id}
         });
     }
+    public static async Task<bool> dersSil(string p_ders_id)
+    {
+        string url = $"{server_url}/dersSil.php";
+
+        return await sendPostRequest(url, new Dictionary<string, string>()
+        {
+            {"p_derslik_id",p_ders_id} //Post ile belirtilen php dosyasýna gönderilen deðerler
+            
+        });
+    }
 
     static bool HasErrorMessage(string msg) => int.TryParse(msg, out var res);
 
