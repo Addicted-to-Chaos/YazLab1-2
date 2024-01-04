@@ -50,7 +50,7 @@ public class TimetableButtons : MonoBehaviour
     public string p_gun_id;
 
     public string p_ders_id;
-    [SerializeField] public string p_derslik_id;
+    public string p_derslik_id;
     public string p_ogretmen_id;
 
     public void ShowToast(string message, float duration)
