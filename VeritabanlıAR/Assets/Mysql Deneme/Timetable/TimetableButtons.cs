@@ -2140,20 +2140,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "1";
         p_gun_id = "4";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-1.4"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.4")||hangiHoca==PlayerPrefs.GetString("1036O-1.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-1.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.4") || hangiHoca == PlayerPrefs.GetString("1040O-1.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-1.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.4") || hangiHoca == PlayerPrefs.GetString("1041O-1.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-1.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.4") || hangiHoca == PlayerPrefs.GetString("1044O-1.4"))
         {
             goto Son;
         }
@@ -2184,18 +2185,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-1.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-1.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-1.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-1.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-1.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-1.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-1.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-1.4", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2211,20 +2216,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "2";
         p_gun_id = "4";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-2.4"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.4")||hangiHoca==PlayerPrefs.GetString("1036O-2.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-2.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.4") || hangiHoca == PlayerPrefs.GetString("1040O-2.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-2.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.4") || hangiHoca == PlayerPrefs.GetString("1041O-2.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-2.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.4") || hangiHoca == PlayerPrefs.GetString("1044O-2.4"))
         {
             goto Son;
         }
@@ -2255,18 +2261,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-2.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-2.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-2.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-2.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-2.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-2.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-2.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-2.4", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2282,20 +2292,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "3";
         p_gun_id = "4";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-3.4"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.4")|| hangiHoca==PlayerPrefs.GetString("1036O-3.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-3.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.4") || hangiHoca == PlayerPrefs.GetString("1040O-3.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-3.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.4") || hangiHoca == PlayerPrefs.GetString("1041O-3.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-3.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.4") || hangiHoca == PlayerPrefs.GetString("1044O-3.4"))
         {
             goto Son;
         }
@@ -2326,18 +2337,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-3.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-3.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-3.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-3.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-3.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-3.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-3.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-3.4", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2353,20 +2368,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "4";
         p_gun_id = "4";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-4.4"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.4")||hangiHoca==PlayerPrefs.GetString("1036O-4.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-4.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.4") || hangiHoca == PlayerPrefs.GetString("1040O-4.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-4.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.4") || hangiHoca == PlayerPrefs.GetString("1041O-4.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-4.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.4") || hangiHoca == PlayerPrefs.GetString("1044O-4.4"))
         {
             goto Son;
         }
@@ -2397,18 +2413,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-4.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-4.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-4.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-4.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-4.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-4.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-4.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-4.4", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2424,20 +2444,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "5";
         p_gun_id = "4";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-5.4"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.4")||hangiHoca==PlayerPrefs.GetString("1036O-5.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-5.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.4") || hangiHoca == PlayerPrefs.GetString("1040O-5.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-5.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.4") || hangiHoca == PlayerPrefs.GetString("1041O-5.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-5.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.4") || hangiHoca == PlayerPrefs.GetString("1044O-5.4"))
         {
             goto Son;
         }
@@ -2468,18 +2489,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-5.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-5.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-5.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-5.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-5.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-5.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-5.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-5.4", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2495,20 +2520,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "6";
         p_gun_id = "4";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-6.4"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.4")||hangiHoca== PlayerPrefs.GetString("1036O-6.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-6.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.4") || hangiHoca == PlayerPrefs.GetString("1040O-6.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-6.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.4") || hangiHoca == PlayerPrefs.GetString("1041O-6.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-6.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.4") || hangiHoca == PlayerPrefs.GetString("1044O-6.4"))
         {
             goto Son;
         }
@@ -2539,18 +2565,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-6.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-6.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-6.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-6.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-6.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-6.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-6.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-6.4", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2566,20 +2596,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "7";
         p_gun_id = "4";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-7.4"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-7.4") || hangiHoca == PlayerPrefs.GetString("1036O-7.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-7.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-7.4")|| hangiHoca==PlayerPrefs.GetString("1040O-7.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-7.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-7.4") || hangiHoca == PlayerPrefs.GetString("1041O-7.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-7.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-7.4") || hangiHoca == PlayerPrefs.GetString("1044O-7.4"))
         {
             goto Son;
         }
@@ -2610,18 +2641,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-7.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-7.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-7.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-7.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-7.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-7.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-7.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-7.4", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2638,20 +2673,21 @@ public class TimetableButtons : MonoBehaviour
         p_gun_id = "4";
 
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-8.4"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.4")||hangiHoca==PlayerPrefs.GetString("1036O-8.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-8.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.4") || hangiHoca == PlayerPrefs.GetString("1040O-8.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-8.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.4") || hangiHoca == PlayerPrefs.GetString("1041O-8.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-8.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.4") || hangiHoca == PlayerPrefs.GetString("1044O-8.4"))
         {
             goto Son;
         }
@@ -2682,18 +2718,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-8.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-8.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-8.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-8.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-8.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-8.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-8.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-8.4", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2709,20 +2749,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "9";
         p_gun_id = "4";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-9.4"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.4")||hangiHoca==PlayerPrefs.GetString("1036O-9.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-9.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.4") || hangiHoca == PlayerPrefs.GetString("1040O-9.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-9.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.4") || hangiHoca == PlayerPrefs.GetString("1041O-9.4"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-9.4"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.4") || hangiHoca == PlayerPrefs.GetString("1044O-9.4"))
         {
             goto Son;
         }
@@ -2753,18 +2794,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-9.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-9.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-9.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-9.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-9.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-9.4", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-9.4", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-9.4", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2780,20 +2825,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "1";
         p_gun_id = "5";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-1.5"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-1.5")||hangiHoca==PlayerPrefs.GetString("1036O-1.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-1.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-1.5") || hangiHoca == PlayerPrefs.GetString("1040O-1.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-1.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-1.5") || hangiHoca == PlayerPrefs.GetString("1041O-1.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-1.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-1.5") || hangiHoca == PlayerPrefs.GetString("1044O-1.5"))
         {
             goto Son;
         }
@@ -2824,18 +2870,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-1.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-1.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-1.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-1.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-1.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-1.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-1.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-1.5", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2852,20 +2902,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "2";
         p_gun_id = "5";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-2.5"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-2.5")||hangiHoca==PlayerPrefs.GetString("1036O-2.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-2.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-2.5") || hangiHoca == PlayerPrefs.GetString("1040O-2.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-2.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-2.5") || hangiHoca == PlayerPrefs.GetString("1041O-2.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-2.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-2.5") || hangiHoca == PlayerPrefs.GetString("1044O-2.5"))
         {
             goto Son;
         }
@@ -2896,18 +2947,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-2.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-2.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-2.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-2.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-2.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-2.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-2.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-2.5", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2923,20 +2978,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "3";
         p_gun_id = "5";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-3.5"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-3.5")||hangiDonem==PlayerPrefs.GetString("1036O-3.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-3.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-3.5") || hangiDonem == PlayerPrefs.GetString("1040O-3.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-3.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-3.5") || hangiDonem == PlayerPrefs.GetString("1041O-3.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-3.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-3.5") || hangiDonem == PlayerPrefs.GetString("1044O-3.5"))
         {
             goto Son;
         }
@@ -2967,18 +3023,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-3.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-3.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-3.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-3.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-3.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-3.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-3.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-3.5", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -2995,20 +3055,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "4";
         p_gun_id = "5";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-4.5"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-4.5")||hangiHoca==PlayerPrefs.GetString("1036O-4.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-4.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-4.5") || hangiHoca == PlayerPrefs.GetString("1040O-4.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-4.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-4.5") || hangiHoca == PlayerPrefs.GetString("1041O-4.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-4.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-4.5") || hangiHoca == PlayerPrefs.GetString("1044O-4.5"))
         {
             goto Son;
         }
@@ -3039,18 +3100,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-4.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-4.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-4.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-4.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-4.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-4.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-4.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-4.5", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -3066,20 +3131,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "5";
         p_gun_id = "5";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-5.5"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-5.5")||hangiHoca==PlayerPrefs.GetString("1036O-5.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-5.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-5.5") || hangiHoca == PlayerPrefs.GetString("1040O-5.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-5.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-5.5") || hangiHoca == PlayerPrefs.GetString("1041O-5.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-5.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-5.5") || hangiHoca == PlayerPrefs.GetString("1044O-5.5"))
         {
             goto Son;
         }
@@ -3110,18 +3176,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-5.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-5.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-5.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-5.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-5.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-5.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-5.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-5.5", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -3138,20 +3208,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "6";
         p_gun_id = "5";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-6.5"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-6.5")|| hangiHoca==PlayerPrefs.GetString("1036O-6.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-6.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-6.5") || hangiHoca == PlayerPrefs.GetString("1040O-6.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-6.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-6.5") || hangiHoca == PlayerPrefs.GetString("1041O-6.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-6.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-6.5") || hangiHoca == PlayerPrefs.GetString("1044O-6.5"))
         {
             goto Son;
         }
@@ -3182,18 +3253,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-6.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-6.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-6.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-6.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-6.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-6.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-6.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-6.5", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -3210,20 +3285,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "7";
         p_gun_id = "5";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-7.5"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-7.5")|| hangiHoca==PlayerPrefs.GetString("1036O-7.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-7.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-7.5") || hangiHoca == PlayerPrefs.GetString("1040O-7.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-7.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-7.5") || hangiHoca == PlayerPrefs.GetString("1041O-7.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-7.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-7.5") || hangiHoca == PlayerPrefs.GetString("1044O-7.5"))
         {
             goto Son;
         }
@@ -3254,18 +3330,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-7.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-7.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-7.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-7.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-7.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-7.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-7.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-7.5", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -3281,20 +3361,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "8";
         p_gun_id = "5";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-8.5"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-8.5")||hangiHoca==PlayerPrefs.GetString("1036O-8.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-8.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-8.5") || hangiHoca == PlayerPrefs.GetString("1040O-8.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-8.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-8.5") || hangiHoca == PlayerPrefs.GetString("1041O-8.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-8.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-8.5") || hangiHoca == PlayerPrefs.GetString("1044O-8.5"))
         {
             goto Son;
         }
@@ -3325,18 +3406,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-8.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-8.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-8.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-8.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-8.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-8.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-8.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-8.5", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
@@ -3352,20 +3437,21 @@ public class TimetableButtons : MonoBehaviour
         p_saat_id = "9";
         p_gun_id = "5";
         string hangiDonem = dropdownDatas.SeciliDersSINIFI();
+        string hangiHoca = dropdownDatas.SeciliOgretmen();
 
-        if (hangiDonem == PlayerPrefs.GetString("1036-9.5"))
+        if (hangiDonem == PlayerPrefs.GetString("1036-9.5")||hangiHoca==PlayerPrefs.GetString("1036O-9.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1040-9.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1040-9.5") || hangiHoca == PlayerPrefs.GetString("1040O-9.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1041-9.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1041-9.5") || hangiHoca == PlayerPrefs.GetString("1041O-9.5"))
         {
             goto Son;
         }
-        else if (hangiDonem == PlayerPrefs.GetString("1044-9.5"))
+        else if (hangiDonem == PlayerPrefs.GetString("1044-9.5") || hangiHoca == PlayerPrefs.GetString("1044O-9.5"))
         {
             goto Son;
         }
@@ -3396,18 +3482,22 @@ public class TimetableButtons : MonoBehaviour
                 if (p_derslik_id == "1")
                 {
                     PlayerPrefs.SetString("1036-9.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1036O-9.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "2")
                 {
                     PlayerPrefs.SetString("1040-9.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1040O-9.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "3")
                 {
                     PlayerPrefs.SetString("1041-9.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1041O-9.5", dropdownDatas.SeciliOgretmen());
                 }
                 else if (p_derslik_id == "4")
                 {
                     PlayerPrefs.SetString("1044-9.5", dropdownDatas.SeciliDersSINIFI());
+                    PlayerPrefs.SetString("1044O-9.5", dropdownDatas.SeciliOgretmen());
                 }
             }
             else
