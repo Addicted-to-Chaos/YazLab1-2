@@ -2827,7 +2827,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 607098556}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1356381431}
+        m_TargetAssemblyTypeName: EkleCikarManager, Assembly-CSharp
+        m_MethodName: OgretmenEkle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &607098556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5629,21 +5641,17 @@ MonoBehaviour:
     m_Options:
     - m_Text: 
       m_Image: {fileID: 0}
+    - m_Text: 1
+      m_Image: {fileID: 0}
+    - m_Text: 2
+      m_Image: {fileID: 0}
+    - m_Text: 3
+      m_Image: {fileID: 0}
+    - m_Text: 4
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 911707796}
-        m_TargetAssemblyTypeName: DropdownDatas, Assembly-CSharp
-        m_MethodName: HandleDerslerData
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1206034985
 MonoBehaviour:
@@ -5780,9 +5788,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 911707791}
+      - m_Target: {fileID: 911707796}
         m_TargetAssemblyTypeName: DropdownDatas, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: HandleOgretmenlerData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6021,6 +6029,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p_ders_id: 
+  dersSinifSelected: 
+  ders_adi: {fileID: 1922727331}
+  ogretmen_adi: {fileID: 8130616}
+  aa: {fileID: 1206034984}
 --- !u!4 &1356381432
 Transform:
   m_ObjectHideFlags: 0
@@ -6606,7 +6618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39, y: 33}
+  m_AnchoredPosition: {x: 39, y: 37}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531005431
@@ -6631,15 +6643,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Ka\xE7\u0131nc\u0131 S\u0131n\u0131f Dersi?"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9447dde02c9cca04bab7e3af803f43d7, type: 2}
+  m_sharedMaterial: {fileID: -2150303073914254677, guid: 9447dde02c9cca04bab7e3af803f43d7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287795866
-  m_fontColor: {r: 0.6037736, g: 0.5718761, b: 0.5718761, a: 1}
+    rgba: 4286874764
+  m_fontColor: {r: 0.5471698, g: 0.51826274, b: 0.51826274, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6662,7 +6674,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -6692,7 +6704,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -44.455902, w: 0}
+  m_margin: {x: 0, y: 0, z: -59.554565, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7156,7 +7168,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1623478006}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1356381431}
+        m_TargetAssemblyTypeName: EkleCikarManager, Assembly-CSharp
+        m_MethodName: OgretmenSil
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1623478006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8751,7 +8775,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2061596105}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1356381431}
+        m_TargetAssemblyTypeName: EkleCikarManager, Assembly-CSharp
+        m_MethodName: DersEkle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2061596105
 MonoBehaviour:
   m_ObjectHideFlags: 0

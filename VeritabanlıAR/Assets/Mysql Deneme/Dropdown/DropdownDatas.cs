@@ -48,16 +48,12 @@ public class DropdownDatas : MonoBehaviour
     }
     public void HandleOgretmenlerData()
     {
-        string valString = ogretmenlerDropDown.value.ToString();
-        int size = ogretmenlerAd.Count;
-        for(int i = 0; i < size; i++)
-        {
-            if (valString.Equals(ogretmenlerID[i]))
-            {
-                seciliOgretmenID = ogretmenlerID[i];
-                seciliOgretmenAD = ogretmenlerAd[i];
-            }
-        }
+        int i = ogretmenlerDropDown.value;
+        
+                seciliOgretmenID = ogretmenlerID[i-1];
+                seciliOgretmenAD = ogretmenlerAd[i-1];
+            
+        
     }
     #endregion Ogretmenler
 
@@ -68,6 +64,7 @@ public class DropdownDatas : MonoBehaviour
         {
             string[] parcalar = dersler[i].Trim().Split(",");
             dersID.Add(parcalar[0]);
+            Debug.Log(parcalar[0]);
             dersADI.Add(parcalar[1]);
             dersSinifi.Add(parcalar[2]);
 
@@ -79,17 +76,12 @@ public class DropdownDatas : MonoBehaviour
 
     public void HandleDerslerData()
     {
-        string valString = derslerDropDown.value.ToString();
-        int size = dersADI.Count;
-        for (int i = 0; i < size; i++)
-        {
-            if (valString.Equals(dersID[i]))
-            {
-                seciliDersID = dersID[i];
-                seciliDersADI = dersADI[i];
-                seciliDersSinifi = dersSinifi[i];
-            }
-        }
+        int i = derslerDropDown.value;       
+            
+                seciliDersID = dersID[i-1];
+                seciliDersADI = dersADI[i-1];
+                seciliDersSinifi = dersSinifi[i - 1];           
+        
     }
     #endregion Dersler
     private void Start()

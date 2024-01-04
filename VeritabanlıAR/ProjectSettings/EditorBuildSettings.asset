@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Mysql Deneme/Home.unity
-    guid: 1825b88a483a5434e880eda7a65a5ce3
   - enabled: 1
     path: Assets/Mysql Deneme/Menu.unity
     guid: ae6f5c76e50c5354c8600dfcb2322f42

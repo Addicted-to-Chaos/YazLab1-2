@@ -46,7 +46,7 @@ static class MysqlPostManager
     }
     public static async Task<bool> ogretmenEkle( string ad)
     {
-        string url = $"{server_url}/dersOgretmenEkle.php";
+        string url = $"{server_url}/ogretmenEkle.php";
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
@@ -80,23 +80,23 @@ static class MysqlPostManager
             {"p_saat_id",p_saat_id}
         });
     }
-    public static async Task<bool> dersSil(string p_ders_id)
+    public static async Task<bool> dersSil(string ders_id)
     {
         string url = $"{server_url}/dersSil.php";
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
-            {"p_derslik_id",p_ders_id} //Post ile belirtilen php dosyasýna gönderilen deðerler
+            {"ders_id",ders_id} //Post ile belirtilen php dosyasýna gönderilen deðerler
             
         });
     }
-    public static async Task<bool> ogretmenSil(string ad)
+    public static async Task<bool> ogretmenSil(string ogretmen_id)
     {
         string url = $"{server_url}/ogretmenSil.php";
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
-            {"ad",ad} //Post ile belirtilen php dosyasýna gönderilen deðerler
+            {"ogretmen_id",ogretmen_id} //Post ile belirtilen php dosyasýna gönderilen deðerler
             
         });
     }

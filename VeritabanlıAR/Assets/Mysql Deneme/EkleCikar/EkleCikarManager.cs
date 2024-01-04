@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class EkleCikarManager : MonoBehaviour
 {
     DropdownDatas dd;
-    [SerializeField]string p_ders_id;
+    [SerializeField] string p_ders_id;
+    [SerializeField] string p_ogretmen_id;
     public string dersSinifSelected;
 
     public TMP_InputField ders_adi;
@@ -16,12 +17,14 @@ public class EkleCikarManager : MonoBehaviour
 
     private void Update()
     {
-        dd= FindObjectOfType<DropdownDatas>();
-        p_ders_id = dd.SeciliDers();
-        dersSinifSelected = aa.value.ToString();
+        dd = FindObjectOfType<DropdownDatas>();
+        p_ders_id = dd.seciliDersID;
+        p_ogretmen_id = dd.SeciliOgretmen();
+        dersSinifSelected = aa.value.ToString(); 
+
     }
 
-    
+
 
 
     public async void DersCikar()
@@ -56,7 +59,7 @@ public class EkleCikarManager : MonoBehaviour
 
     public async void OgretmenSil()
     {
-        if (await MysqlPostManager.ogretmenSil(ogretmen_adi.text))
+        if (await MysqlPostManager.ogretmenSil(p_ogretmen_id))
         {
             print("BaþarýylaSilindi");
         }

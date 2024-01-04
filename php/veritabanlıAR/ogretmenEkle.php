@@ -6,7 +6,7 @@ $ogretmenId=$_POST["ogretmen_id"];
 $ad=$_POST["ad"];
 
 
-$sql="INSERT INTO gun(ogretmen_id,ad)VALUES('".$ogretmenId."','".$ad."')";
+$sql="INSERT INTO ogretmen(ad)VALUES('".$ad."')";
 
 
 try
