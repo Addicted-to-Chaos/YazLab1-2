@@ -164,6 +164,10 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1036-" + parcalar[5] + ".1";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2= "1036O-" + parcalar[5] + ".1";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
+
                     }
                     break;
                 case "2":
@@ -176,6 +180,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1036-" + parcalar[5] + ".2";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1036O-" + parcalar[5] + ".2";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "3":
@@ -188,6 +195,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1036-" + parcalar[5] + ".3";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1036O-" + parcalar[5] + ".3";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "4":
@@ -200,6 +210,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1036-" + parcalar[5] + ".4";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1036O-" + parcalar[5] + ".4";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "5":
@@ -212,6 +225,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1036-" + parcalar[5] + ".5";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1036O-" + parcalar[5] + ".5";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 default:
@@ -284,6 +300,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1040-" + parcalar[5] + ".1";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1040O-" + parcalar[5] + ".1";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "2":
@@ -296,6 +315,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1040-" + parcalar[5] + ".2";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1040O-" + parcalar[5] + ".2";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "3":
@@ -308,6 +330,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1040-" + parcalar[5] + ".3";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1040O-" + parcalar[5] + ".3";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "4":
@@ -320,6 +345,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1040-" + parcalar[5] + ".4";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1040O-" + parcalar[5] + ".4";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "5":
@@ -332,6 +360,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1040-" + parcalar[5] + ".5";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1040O-" + parcalar[5] + ".5";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 default:
@@ -402,6 +433,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1041-" + parcalar[5] + ".1";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1041O-" + parcalar[5] + ".1";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "2":
@@ -414,6 +448,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1041-" + parcalar[5] + ".2";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1041O-" + parcalar[5] + ".2";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "3":
@@ -426,6 +463,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1041-" + parcalar[5] + ".3";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1041O-" + parcalar[5] + ".3";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "4":
@@ -438,6 +478,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1041-" + parcalar[5] + ".4";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1041O-" + parcalar[5] + ".4";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "5":
@@ -450,6 +493,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1041-" + parcalar[5] + ".5";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1041O-" + parcalar[5] + ".5";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 default:
@@ -523,6 +569,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1044-" + parcalar[5] + ".1";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1044O-" + parcalar[5] + ".1";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "2":
@@ -535,6 +584,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1044-" + parcalar[5] + ".2";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1044O-" + parcalar[5] + ".2";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "3":
@@ -547,6 +599,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1044-" + parcalar[5] + ".3";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1044O-" + parcalar[5] + ".3";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "4":
@@ -559,6 +614,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1044-" + parcalar[5] + ".4";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1044O-" + parcalar[5] + ".4";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 case "5":
@@ -571,6 +629,9 @@ public class GetTimeTables : MonoBehaviour
                         buttonImage.color = color;
                         string prefsTag = "1044-" + parcalar[5] + ".5";
                         PlayerPrefs.SetString(prefsTag, parcalar[6]);
+
+                        string prefsTag2 = "1044O-" + parcalar[5] + ".5";
+                        PlayerPrefs.SetString(prefsTag2, parcalar[2]);
                     }
                     break;
                 default:
