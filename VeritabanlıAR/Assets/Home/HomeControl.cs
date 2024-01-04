@@ -24,5 +24,9 @@ public class HomeControl : MonoBehaviour
     {
         SceneManager.LoadScene("1044");
     }
+    public void sceneEkleCikar()
+    {
+        SceneManager.LoadScene("EkleCikar");
+    }
 
 }
