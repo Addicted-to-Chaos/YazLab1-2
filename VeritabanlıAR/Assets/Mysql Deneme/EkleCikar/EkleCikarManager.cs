@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EkleCikarManager : MonoBehaviour
@@ -65,5 +66,10 @@ public class EkleCikarManager : MonoBehaviour
         }
         else
             print("Silinmedi");
+    }
+
+    public void MenuBack()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }

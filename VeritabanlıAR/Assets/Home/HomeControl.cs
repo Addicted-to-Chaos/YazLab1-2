@@ -28,5 +28,8 @@ public class HomeControl : MonoBehaviour
     {
         SceneManager.LoadScene("EkleCikar");
     }
-
+    public void MenuBack()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

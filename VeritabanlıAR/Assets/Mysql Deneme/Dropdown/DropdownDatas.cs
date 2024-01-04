@@ -64,7 +64,6 @@ public class DropdownDatas : MonoBehaviour
         {
             string[] parcalar = dersler[i].Trim().Split(",");
             dersID.Add(parcalar[0]);
-            Debug.Log(parcalar[0]);
             dersADI.Add(parcalar[1]);
             dersSinifi.Add(parcalar[2]);
 
