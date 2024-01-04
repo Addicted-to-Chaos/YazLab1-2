@@ -75,9 +75,9 @@ static class MysqlPostManager
 
         return await sendPostRequest(url, new Dictionary<string, string>()
         {
-            {"p_derslik_id",p_derslik_id}, //Post ile belirtilen php dosyasýna gönderilen deðerler
-            {"p_gun_id",p_gun_id},
-            {"p_saat_id",p_saat_id}
+            {"derslik_id",p_derslik_id}, //Post ile belirtilen php dosyasýna gönderilen deðerler
+            {"gun_id",p_gun_id},
+            {"saat_id",p_saat_id}
         });
     }
     public static async Task<bool> dersSil(string ders_id)
