@@ -17,14 +17,14 @@ CREATE TABLE derslik (
     derslik_id INT PRIMARY KEY AUTO_INCREMENT,
     derslik_adi VARCHAR(50)
 );
-/*
+
 CREATE TABLE ders_ogretmen (
     ders_ogretmen_id INT PRIMARY KEY AUTO_INCREMENT,
     ders_id INT,
     ogretmen_id INT,
     FOREIGN KEY (ders_id) REFERENCES ders(ders_id),
     FOREIGN KEY (ogretmen_id) REFERENCES ogretmen(ogretmen_id)
-);*/
+);
 
 CREATE TABLE gun (
     gun_id INT PRIMARY KEY AUTO_INCREMENT,

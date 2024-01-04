@@ -1,5 +1,5 @@
 <?php
-require "conn.php";
+require "conn.php"; // Veritabanı bağlantınızı kontrol edin ve bu dosyayı doğru konumda olduğundan emin olun.
 
 // POST verilerini alma
 $derslik = $_POST["derslik_id"];
@@ -8,9 +8,9 @@ $saatId = $_POST["saat_id"];
 
 // DELETE sorgusu
 $sql = "DELETE FROM ders_programi 
-        WHERE derslik_id = '.$derslik.' 
-        AND gun_id = '.$gunId.' 
-        AND saat_id = '.$saatId.'";
+        WHERE derslik_id = $derslik 
+        AND gun_id = $gunId 
+        AND saat_id = $saatId";
 
 try {
     // Sorguyu çalıştırma
