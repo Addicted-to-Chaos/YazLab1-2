@@ -36,6 +36,8 @@ public class EkleCikarManager : MonoBehaviour
         }
         else
             print("Silinmedi");
+
+        SceneManager.LoadScene("EkleCikar");
     }
 
     public async void DersEkle()
@@ -46,6 +48,8 @@ public class EkleCikarManager : MonoBehaviour
         }
         else
             print("Silinmedi");
+
+        SceneManager.LoadScene("EkleCikar");
     }
 
     public async void OgretmenEkle()
@@ -56,6 +60,8 @@ public class EkleCikarManager : MonoBehaviour
         }
         else
             print("Silinmedi");
+
+        SceneManager.LoadScene("EkleCikar");
     }
 
     public async void OgretmenSil()
@@ -66,6 +72,8 @@ public class EkleCikarManager : MonoBehaviour
         }
         else
             print("Silinmedi");
+
+        SceneManager.LoadScene("EkleCikar");
     }
 
     public void MenuBack()
