@@ -98,14 +98,14 @@ INSERT INTO derslik (derslik_adi) VALUES ('1041');
 INSERT INTO derslik (derslik_adi) VALUES ('1044');
 
 -- Ders_Ogretmen tablosuna veri ekleme
-INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (1, 3); 
+/* INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (1, 3); 
 INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (2, 2);
 INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (3, 5); 
 INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (4, 1); 
 INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (5, 4); 
 INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (6, 1);
 INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (6, 2);
-INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (7, 6);
+INSERT INTO ders_ogretmen (ders_id, ogretmen_id) VALUES (7, 6);*/
 
 
 

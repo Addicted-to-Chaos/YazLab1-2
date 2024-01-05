@@ -6017,7 +6017,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!114 &1356381431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6036,8 +6035,6 @@ MonoBehaviour:
   ders_adi: {fileID: 1922727331}
   ogretmen_adi: {fileID: 8130616}
   aa: {fileID: 1206034984}
-=======
->>>>>>> Stashed changes
 --- !u!4 &1356381432
 Transform:
   m_ObjectHideFlags: 0
@@ -7324,7 +7321,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-<<<<<<< Updated upstream
       - m_Target: {fileID: 1356381431}
         m_TargetAssemblyTypeName: EkleCikarManager, Assembly-CSharp
         m_MethodName: OgretmenSil
@@ -7332,7 +7328,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-=======
       - m_Target: {fileID: 1356381430}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
@@ -7340,7 +7335,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: 
->>>>>>> Stashed changes
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
