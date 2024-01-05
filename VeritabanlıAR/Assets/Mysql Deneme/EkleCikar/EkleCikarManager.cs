@@ -70,6 +70,7 @@ public class EkleCikarManager : MonoBehaviour
 
     public void MenuBack()
     {
+        DeleteLesson.silmeEnabled = false;
         SceneManager.LoadScene("Menu");
     }
 }

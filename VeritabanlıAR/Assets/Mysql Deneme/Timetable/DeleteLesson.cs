@@ -1,15 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DeleteLesson : MonoBehaviour
 {
     public GameObject silmePaneli;
+    public static bool silmeEnabled = false;
     private void Start()
     {
-        silmePaneli.SetActive(false);
+        silmePaneli.SetActive(silmeEnabled);
     }
 
     [SerializeField] string derslik_id;
@@ -29,7 +34,9 @@ public class DeleteLesson : MonoBehaviour
                 {
                     PlayerPrefs.DeleteKey(bir);
                     PlayerPrefs.DeleteKey(iki);
+                    silmeEnabled = true;
                 }
+                SceneManager.LoadScene("MysqlDeneme");
             }
             else if (derslik_id.Equals("2"))
             {
@@ -39,7 +46,9 @@ public class DeleteLesson : MonoBehaviour
                 {
                     PlayerPrefs.DeleteKey(bir);
                     PlayerPrefs.DeleteKey(iki);
+                    silmeEnabled = true;
                 }
+                SceneManager.LoadScene("1040");
             }
             else if (derslik_id.Equals("3"))
             {
@@ -49,7 +58,9 @@ public class DeleteLesson : MonoBehaviour
                 {
                     PlayerPrefs.DeleteKey(bir);
                     PlayerPrefs.DeleteKey(iki);
+                    silmeEnabled = true;
                 }
+                SceneManager.LoadScene("1041");
             }
             else if (derslik_id.Equals("4"))
             {
@@ -59,10 +70,13 @@ public class DeleteLesson : MonoBehaviour
                 {
                     PlayerPrefs.DeleteKey(bir);
                     PlayerPrefs.DeleteKey(iki);
+                    silmeEnabled = true;
                 }
+                SceneManager.LoadScene("1044");
             }
-            
+
             print("BaþarýylaSilindi");
+            
         }
         else
             print("Silinmedi");
@@ -75,5 +89,6 @@ public class DeleteLesson : MonoBehaviour
     public void silmePaneliKapat()
     {
         silmePaneli.SetActive(false);
+        silmeEnabled = false;
     }
 }

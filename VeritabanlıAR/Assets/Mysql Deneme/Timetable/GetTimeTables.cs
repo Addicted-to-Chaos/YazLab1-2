@@ -102,7 +102,7 @@ public class GetTimeTables : MonoBehaviour
         
     }
 
-    void b1036()
+    public void b1036()
     {
 
         for (int i = 0; i < dataFetch.dersProgrami1036.Length - 1; i++)
@@ -239,7 +239,7 @@ public class GetTimeTables : MonoBehaviour
             
 
     
-    void b1040()
+    public void b1040()
     {
         for (int i = 0; i < dataFetch.dersProgrami1040.Length - 1; i++)
         {
@@ -370,7 +370,7 @@ public class GetTimeTables : MonoBehaviour
             }
         }
     }
-    void b1041()
+    public void b1041()
     {
         for (int i = 0; i < dataFetch.dersProgrami1041.Length - 1; i++)
         {
@@ -504,7 +504,7 @@ public class GetTimeTables : MonoBehaviour
         }
 
     }
-    void b1044()
+    public void b1044()
     {
         for (int i = 0; i < dataFetch.dersProgrami1044.Length - 1; i++)
         {
@@ -639,4 +639,6 @@ public class GetTimeTables : MonoBehaviour
             }
         }
     }
+
+   
 }
