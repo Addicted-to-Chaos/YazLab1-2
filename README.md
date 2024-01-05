@@ -1,4 +1,4 @@
-YazLab1_2 AR/Veritabanı Projesi
+YazLab1_2 AR/Veritabanı Projesi <br>
 Projeye Çalıştırmak için gerekli olanlar görsellerden sonra en alt kısımdadır.
 ## Proje İsmi
 --Astro--
