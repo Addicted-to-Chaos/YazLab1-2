@@ -1,4 +1,5 @@
 YazLab1_2 AR/Veritabanı Projesi
+Projeye Çalıştırmak için gerekli olanlar görsellerden sonra en alt kısımdadır.
 ## Proje İsmi
 --Astro--
 
@@ -34,8 +35,15 @@ Okullar için ders programları genellikle karmaşık olabilir ve öğrencilerin
 ![image](https://github.com/Addicted-to-Chaos/YazLab1-2/assets/91319092/4470e7fd-a6e7-4249-971d-93175136184b)  ![image](https://github.com/Addicted-to-Chaos/YazLab1-2/assets/91319092/e8e780f0-e1f6-4603-b8b7-5fe9088729a3) ![image](https://github.com/Addicted-to-Chaos/YazLab1-2/assets/91319092/90199781-a001-45ba-aa54-f46fce209d05)
 
 
+**Projeyi çalıştırmak için gerekli olanlar:**
+**!!!LÜTFEN PROJE İÇİNDEKİ GEREKLİLİKLER DOSYASIDAKİLERİ KULLANIN!!!**
 
-
-
-
-
+1. Xampp indirin: indirme linki: https://www.apachefriends.org/tr/download.html
+2. Dosyalar içinde vermiş olduğumuz php adlı dosyayı Xampp'in kurulu olduğu dosya içindeki htdocs içine atın
+(Konumu değiştirilmediyse: C:\xampp\htdocs)
+3. Xampp'i açtıktan sonra Apache ve MySQL sunucularını başlatın ve MySQL'in yanında bulunan Admin butonuna tıklayın.
+(Eğer açılmassa tarayıcınızdan localhost/phpmyadmin yazarak giriş yapın)
+4. Önümüze phpMyAdmin paneli gelicek. Gelen bu panelden içe aktar seçeneğine basarak açılan sayfada gözata tıklıyoruz ve dosyalar içinde verdiğimiz dersprogrami.sql dosyasını seçerek buraya aktarıyoruz. Bu işlem sonucunda veritabanımız kullanmaya hazırdır.
+5. Xampp uygulaması uygulamayı kullandığımız sürece açık kalmalıdır.
+6. Projemizi Unity üzerinden açıyoruz.
+7. Projemiz çalışmaya hazır.
